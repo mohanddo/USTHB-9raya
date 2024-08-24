@@ -11,6 +11,17 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        android:text="Selected file link will appear here" />
+
+    <TextView
         android:id="@+id/text_link_drive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,5 +47,39 @@
         android:textColor="@color/white">
 
     </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butt_open_file_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="upload drive"
+        android:backgroundTint="@color/black"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/white">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butt_send_email_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="send email"
+        android:backgroundTint="@color/black"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/white">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
