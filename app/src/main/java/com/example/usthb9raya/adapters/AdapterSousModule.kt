@@ -1,4 +1,4 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.usthb9raya.dataClass.DataClassSousModule
+import com.example.usthb9raya.R
 
 
 class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
