@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttOpenDrive.setOnClickListener {
             val driveLink = binding.textLinkDrive.text.toString()
             if (driveLink.isNotEmpty()) {
-                openDriveLink(driveLink)
+                gohome()
             } else {
                 // Handle the case where the URL is empty
                 Toast.makeText(this, "URL is empty", Toast.LENGTH_SHORT).show()
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private fun sendEmailWithAttachment(uri: Uri) {
+   private fun sendEmailWithAttachment(uri: Uri) {
         val emailIntent = Intent(Intent.ACTION_SEND).apply {
             type = "vnd.android.cursor.dir/email"
             putExtra(Intent.EXTRA_EMAIL, arrayOf("mahfoufakli2@gmail.com"))
@@ -104,5 +104,9 @@ class MainActivity : AppCompatActivity() {
             putExtra(Intent.EXTRA_STREAM, uri)
         }
         startActivity(Intent.createChooser(emailIntent, "Send email..."))
+    }
+    private fun gohome(){
+        val intent = Intent(this@MainActivity , MainActivity2::class.java)
+        startActivity(intent)
     }
 }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linear_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bck_textview"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bck_ic_design_module"
+            android:src="@drawable/ic_arrow_right"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_module"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:text=" module name"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_module"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:paddingEnd="8dp">
+        </ImageView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/submodule_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bck_textview"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bck_ic_design_module"
+            android:src="@drawable/ic_arrow_right"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_course"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:text=" course name"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:paddingEnd="8dp">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_tp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bck_textview"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bck_ic_design_module"
+            android:src="@drawable/ic_arrow_right"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_tp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:text=" tp name"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_tp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:paddingEnd="8dp">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_td"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bck_textview"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bck_ic_design_module"
+            android:src="@drawable/ic_arrow_right"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_td"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:text=" td name"
+            android:textStyle="normal"/>
+
+        <ImageView
+            android:id="@+id/ic_arrow_td"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:paddingEnd="8dp">
+        </ImageView>
+    </LinearLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
