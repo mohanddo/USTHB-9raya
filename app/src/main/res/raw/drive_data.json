@@ -1,0 +1,62 @@
+[
+  {
+    "facultyName": "Engineering",
+    "modules": [
+      {
+        "moduleName": "Computer Science",
+        "courseName": "Course C",
+        "tpName": "TP C",
+        "tdName": "TD C",
+        "sousModules": [
+          {
+            "sousModuleName": "software engineering",
+            "sousModuleCourse": "software course",
+            "sousModuleTp": "software tp",
+            "sousModuleTd": "software td"
+          }
+        ]
+      },
+      {
+        "moduleName": "Electrical Engineering",
+        "courseName": "Course D",
+        "tpName": "TP D",
+        "tdName": "TD D",
+        "sousModules": [
+          {
+            "sousModuleName": "circuit analysis",
+            "sousModuleCourse": "circuit course",
+            "sousModuleTp": "circuit tp",
+            "sousModuleTd": "circuit td"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "facultyName": "Humanities",
+    "modules": [
+      {
+        "moduleName": "History",
+        "courseName": "Course E",
+        "tpName": "TP E",
+        "tdName": "TD E",
+        "sousModules": []
+      },
+      {
+        "moduleName": "Philosophy",
+        "courseName": "Course F",
+        "tpName": "TP F",
+        "tdName": "TD F",
+        "sousModules": [
+          {
+            "sousModuleName": "ethics",
+            "sousModuleCourse": "ethics course",
+            "sousModuleTp": "ethics tp",
+            "sousModuleTd": "ethics td"
+          }
+        ]
+      }
+    ]
+  }
+]
+
