@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.usthb9raya.Utils.Utils.openDriveLink
 import com.example.usthb9raya.databinding.ActivityMainBinding
 
@@ -20,11 +23,41 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         enableEdgeToEdge()
-
-        binding.buttOpenDrive.setOnClickListener {
-            val driveLink = binding.textLinkDrive.text.toString()
-            openDriveLink(this, driveLink)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
 
+        setCurrentFragment(HomeFragment())
+
+        val homeFragment = HomeFragment()
+        val favoritesFragment = FavoritesFragment()
+        val contributeFragment = ContributeFragment()
+        val settingsFragment = SettingsFragment()
+
+        binding.buttHome.setOnClickListener {
+            setCurrentFragment(homeFragment)
+        }
+
+        binding.buttFavorites.setOnClickListener {
+            setCurrentFragment(favoritesFragment)
+        }
+
+        binding.buttContribute.setOnClickListener {
+            setCurrentFragment(contributeFragment)
+        }
+
+        binding.buttSettings.setOnClickListener {
+            setCurrentFragment(settingsFragment)
+        }
+
+    }
+
+    private fun setCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragmentMain, fragment)
+            commit()
+        }
     }
 }

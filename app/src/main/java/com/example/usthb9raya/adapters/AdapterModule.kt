@@ -60,7 +60,7 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.textview_row, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.module_row, parent, false)
         return MyViewHolder(view)
     }
 
