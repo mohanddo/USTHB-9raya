@@ -19,9 +19,7 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
             val sous_module_tp: LinearLayout = itemView.findViewById(R.id.linear_sous_module_tp)
             val sous_module_td: LinearLayout = itemView.findViewById(R.id.linear_sous_module_td)
             val sous_module_module_name: TextView = itemView.findViewById(R.id.text_view_sous_module)
-            val sous_module_course_name: TextView = itemView.findViewById(R.id.text_view_sous_module_course)
-            val sous_module_tp_name: TextView = itemView.findViewById(R.id.text_view_sous_module_tp)
-            val sous_module_td_name: TextView = itemView.findViewById(R.id.text_view_sous_module_td)
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -34,9 +32,8 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
 
             // Set text for views
             holder.sous_module_module_name.text = item.sous_module_name
-            holder.sous_module_course_name.text = item.sous_module_course_name
-            holder.sous_module_tp_name.text = item.sous_module_tp_name
-            holder.sous_module_td_name.text = item.sous_module_td_name
+
+
 
             // Initialize visibility states
             holder.sous_module.visibility = View.VISIBLE

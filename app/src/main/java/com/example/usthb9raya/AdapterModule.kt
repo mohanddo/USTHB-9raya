@@ -17,9 +17,6 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
         val tp: LinearLayout = itemView.findViewById(R.id.linear_tp)
         val td: LinearLayout = itemView.findViewById(R.id.linear_td)
         val module_name: TextView = itemView.findViewById(R.id.text_view_module)
-        val course_name: TextView = itemView.findViewById(R.id.text_view_course)
-        val tp_name: TextView = itemView.findViewById(R.id.text_view_tp)
-        val td_name: TextView = itemView.findViewById(R.id.text_view_td)
         val submodule: RecyclerView = itemView.findViewById(R.id.submodule_recycler_view)
 
 
@@ -45,9 +42,7 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
 
         fun bind(module: DataClassModule) {
             module_name.text = module.module_name
-            course_name.text = module.course_name
-            tp_name.text = module.tp_name
-            td_name.text = module.td_name
+
 
             val hasSubmodules = module.submodules.isNotEmpty()
             submodule.visibility = if (hasSubmodules) View.GONE else View.VISIBLE
