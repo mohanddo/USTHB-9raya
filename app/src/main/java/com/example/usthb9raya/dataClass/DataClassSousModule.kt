@@ -1,4 +1,4 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.dataClass
 
 data class DataClassSousModule(
     val sous_module_name : String ,

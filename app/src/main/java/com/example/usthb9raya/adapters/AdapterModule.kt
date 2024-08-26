@@ -1,4 +1,4 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.usthb9raya.dataClass.DataClassModule
+import com.example.usthb9raya.R
 
 class AdapterModule(private var itemList: List<DataClassModule>) :
     RecyclerView.Adapter<AdapterModule.MyViewHolder>() {

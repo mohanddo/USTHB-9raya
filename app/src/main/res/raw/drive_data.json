@@ -1,6 +1,6 @@
 [
   {
-    "facultyName": "Engineering",
+    "faculty": "Engineering",
     "modules": [
       {
         "moduleName": "Computer Science",

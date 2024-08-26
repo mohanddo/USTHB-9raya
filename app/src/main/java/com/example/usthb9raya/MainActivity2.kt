@@ -5,6 +5,10 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.usthb9raya.adapters.AdapterFaculty
+import com.example.usthb9raya.dataClass.DataClassFaculty
+import com.example.usthb9raya.dataClass.DataClassModule
+import com.example.usthb9raya.dataClass.DataClassSousModule
 import com.example.usthb9raya.databinding.ActivityMain2Binding
 import org.json.JSONArray
 import java.io.InputStream
