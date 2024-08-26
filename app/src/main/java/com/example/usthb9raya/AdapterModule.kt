@@ -28,13 +28,19 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
                 val hasSubmodules = itemList[adapterPosition].submodules.isNotEmpty()
                 if (hasSubmodules) {
                     val isVisible = submodule.visibility == View.VISIBLE
-                    submodule.visibility = if (isVisible) View.GONE else View.VISIBLE
+                  if (isVisible){
+                      submodule.visibility =   View.GONE
+                      module.setBackgroundResource(R.drawable.bck_textview)
+                    }else{
+                      submodule.visibility =  View.VISIBLE
+                      module.setBackgroundResource(R.drawable.bck_click_textview)
+                    }
                     if (!isVisible) {
                         submodule.layoutManager = LinearLayoutManager(itemView.context)
                         submodule.adapter = sousModuleAdapter
                     }
                 } else {
-                    // Toggle course, tp, and td visibility if there are no submodules
+
                     toggleCourseTpTdVisibility()
                 }
             }
@@ -54,6 +60,8 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
             course.visibility = if (isVisible) View.GONE else View.VISIBLE
             tp.visibility = if (isVisible) View.GONE else View.VISIBLE
             td.visibility = if (isVisible) View.GONE else View.VISIBLE
+            val bckSet = if (isVisible) R.drawable.bck_textview else R.drawable.bck_click_textview
+            module.setBackgroundResource(bckSet)
         }
     }
 

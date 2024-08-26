@@ -30,28 +30,28 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
             val item = sousModule[position]
 
-            // Set text for views
+
             holder.sous_module_module_name.text = item.sous_module_name
 
 
 
-            // Initialize visibility states
             holder.sous_module.visibility = View.VISIBLE
             holder.sous_module_course.visibility = View.GONE
             holder.sous_module_tp.visibility = View.GONE
             holder.sous_module_td.visibility = View.GONE
 
 
-            // Handle module click to toggle course, tp, and td visibility
             holder.sous_module.setOnClickListener {
                 if (holder.sous_module_course.visibility == View.GONE) {
                     holder.sous_module_course.visibility = View.VISIBLE
                     holder.sous_module_tp.visibility = View.VISIBLE
                     holder.sous_module_td.visibility = View.VISIBLE
+                    holder.sous_module.setBackgroundResource(R.drawable.bck_click_textview)
                 } else {
                     holder.sous_module_course.visibility = View.GONE
                     holder.sous_module_tp.visibility = View.GONE
                     holder.sous_module_td.visibility = View.GONE
+                    holder.sous_module.setBackgroundResource(R.drawable.bck_textview)
                 }
             }
         }

@@ -5,22 +5,21 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:id="@+id/linear_sous_module"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@drawable/bck_textview"
-        android:padding="12dp"
+        android:padding="8dp"
         android:layout_marginBottom="12dp"
         android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bck_ic_design_module"
-            android:src="@drawable/ic_arrow_right"
+            android:background="@drawable/bck_ic_design_sous_module"
+            android:src="@drawable/ic_diploma"
             android:padding="10dp" />
 
         <TextView
@@ -39,12 +38,11 @@
             android:id="@+id/ic_arrow_module"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_arrow_right"
+            android:src="@drawable/ic_heart"
             android:paddingEnd="8dp">
         </ImageView>
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,15 +56,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/bck_textview"
-            android:padding="12dp"
+            android:padding="8dp"
             android:layout_marginBottom="12dp"
             android:visibility="gone">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_ic_design_module"
-                android:src="@drawable/ic_arrow_right"
+                android:background="@drawable/bck_ic_design_td_tp_course"
+                android:src="@drawable/ic_class_education"
                 android:padding="10dp" />
 
             <TextView
@@ -95,15 +93,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/bck_textview"
-            android:padding="12dp"
+            android:padding="8dp"
             android:layout_marginBottom="12dp"
             android:visibility="gone">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_ic_design_module"
-                android:src="@drawable/ic_arrow_right"
+                android:background="@drawable/bck_ic_design_td_tp_course"
+                android:src="@drawable/ic_education_maths"
                 android:padding="10dp" />
 
             <TextView
@@ -132,15 +130,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/bck_textview"
-            android:padding="12dp"
+            android:padding="8dp"
             android:layout_marginBottom="12dp"
             android:visibility="gone">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_ic_design_module"
-                android:src="@drawable/ic_arrow_right"
+                android:background="@drawable/bck_ic_design_td_tp_course"
+                android:src="@drawable/ic_school_book"
                 android:padding="10dp" />
 
             <TextView
@@ -164,7 +162,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>

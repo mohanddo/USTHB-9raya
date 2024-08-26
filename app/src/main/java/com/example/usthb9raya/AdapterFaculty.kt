@@ -21,7 +21,13 @@ class AdapterFaculty (private val faculties: List<DataClassFaculty>) :
             init {
                 faculty.setOnClickListener {
                     val isVisible = innerRecyclerView.visibility == View.VISIBLE
-                    innerRecyclerView.visibility = if (isVisible) View.GONE else View.VISIBLE
+                     if(isVisible){
+                         innerRecyclerView.visibility = View.GONE
+                        faculty.setBackgroundResource(R.drawable.bck_textview)
+                    }else{
+                         innerRecyclerView.visibility =  View.VISIBLE
+                        faculty.setBackgroundResource(R.drawable.bck_click_textview)
+                    }
                     if (!isVisible) {
                         innerRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
                         innerRecyclerView.adapter = moduleAdapter
