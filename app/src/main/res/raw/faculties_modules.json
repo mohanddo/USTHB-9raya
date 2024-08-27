@@ -194,6 +194,137 @@
         "sousModules": []
       }
     ]
+  },
+  {
+    "faculty": "Faculté De Chimie",
+    "modules": [
+      {
+        "module": "Chimie",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Chimie 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1DwU7rEmtBU1S3WeDwXHYLYz5_z1I9IAt?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/104aFWmhkc7tbpYP2bu-3jgA9G9Ng9TNj?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1q2xb-WvViorKA4dmoADQ4WxqxbsuKQjF?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1_wLh89dDuxilKbH3Wdu_K5p1BKCqcuzq?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1TZ_FsXoe3MRfL_e_raN6tsR-HwcXWCBL?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Chimie 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1aZmHMBZ2aKs_hWjCeJksjLmoNLwjekas?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1oxmTNnEGZp83uiX_2VwJvZeK6IYZ6Lhk?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/140NIzSCK-IGqlFDikJtjxPk_OY2Mwkap?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1OwZ-2wU5ZocSQKsSZtjuGILvUB29N2jR?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1pMhjnzR8mSSi976pkjD6EsMnYb3mY7CK?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Chimie Minérale",
+        "course": "https://drive.google.com/drive/folders/1ix6KLX2zxlUp4jJCb5JoA9FSBVStKCua?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1UvLB0RCNlf0Rz0s6YRCRMxKV8lsVo8C_?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1_fUEpxATFY-s37lc1hqzYZM2SRXW5fX3?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1ACp1h5SGbLeHUS9udiJEyJFoPP3iDUDx?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1fhluzzydQdhx_RGroBE9TY1rhgsYqXph?usp=drive_link",
+        "sousModules": []
+      }
+    ]
+  },
+
+
+
+  {
+    "faculty": "Faculté De Génie Civil",
+    "modules": [
+      {
+        "module": "Hydrologie",
+        "course": "https://drive.google.com/drive/folders/16NOjStJoIb6NqsERR06h6ct1djPZiAh6?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1e4nXryj8Ml18qkzPmsCq5iGrQa96YGNy?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1aWBdtmA3Rbmbx6h8OnNsPLqT4O4b3dqt?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1QV8mOHNmYliP_wyTurEq1nd2ZG119QaP?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1Pcwvl2hnrH8tOYT_FCqqRPwpftdu5jai?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Hydrologie Générale",
+        "course": "https://drive.google.com/drive/folders/1bpf5hvKXbZfc_W7fWoG5jfe6fDaJzTrC?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1smGjMvZQvGYpMAbPPXqmJouHbtKfA8Hg?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/18VBZsltvUXmmfamLeV7ZZqn9Y6qZO05v?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Gfx_rELCTUbCJINK4Kkn5sgQT9VbaZqN?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1O8eXafOrh1EQrnIQCZST2edFrl4PoDCn?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Matériaux de Construction",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Matériaux de Construction 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/132MQaClbVodLkXpATqcLM_CtvOd3-bm8?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1VTa9ZR0Ou1C6JEImLFh_-ZQsCHHuddyy?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/18LKCIMN9-voZUzTuf4sWfN1JDkRYR_5_?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1IZBYysK9Nn-8vMi73sSvX4Hj1ufJM9N7?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1rEKUZ7JIdv-eOZmERiVfS1aefjMWegVZ?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Matériaux de Construction 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/18Jv_tptG8farBrLzxMf6eN1AZYPjCORa?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1AKbfZV_04-OJ00pKBbv1UsyKf6iyr-Ei?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1I6RIz6sojdMlwFcQnCxSj0BnfMQ3o4Ma?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1_kliYeu6UUeix_5t1LfNED9-ayyNJ3wq?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/12P-LbA4yduKa3u5uZYBnFs9KXpcgV7cW?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Résistance des Matériaux",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Résistance des Matériaux 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1Wv1vOkV-mkPjaMUZPZHLBF9L0d9Sa0H-?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/16u2RrDKrhJqEVyWvFJexpLB3iXSfJqZx?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1idDCOYrsFPOSmyAoS_qxJh9mBr4y__bf?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1w5vsUlFhEMc6x3gdAoLvHtULJFZrmlCp?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1v0XclyH3aif4rUC9Y6MT7qWPiKZCAIwd?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Résistance des Matériaux 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1OHqQnQRUOzh1KV4fU7cpGTX0fvDPycTi?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1Wau9YInt2cSdHGomgBKvwPrn2lklZLRK?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1kgWEfo0m1XdHFvrqJVPYpw9DG9SkpbXn?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1tlKBoU6CbjyYvx6hGXUUMg3TsmmYsW3c?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1UNfxv0YHQqRNRZ5KkF3CealhxeYuEhGr?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Technologies de Fondamentales",
+        "course": "https://drive.google.com/drive/folders/1jRtxRgJuUq-xRsMbpxCMB_ZzwktScC4P?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1r9KYIzSwxUmiMRIQYVCeNa4xs6hX5IUV?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1ILs2oFma2lVscvcyhkMgXn2-9V0Oya0E?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Cf2rxSG3ErgW8zQMLoNrTZhjM8xpDDa-?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1dnurQ7lJivjAls1USorduRsny5EHn3P2?usp=drive_link",
+        "sousModules": []
+      }
+    ]
   }
-]
+
+  ]
+
+
+
 
