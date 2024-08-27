@@ -7,10 +7,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.usthb9raya.dataClass.DataClassFaculty
+import com.example.usthb9raya.dataClass.Faculty
 import com.example.usthb9raya.R
 
-class AdapterFaculty (private val faculties: List<DataClassFaculty>) :
+class AdapterFaculty (private val faculties: List<Faculty>) :
     RecyclerView.Adapter<AdapterFaculty.FacultyViewHolder>() {
 
 
@@ -37,7 +37,7 @@ class AdapterFaculty (private val faculties: List<DataClassFaculty>) :
                 }
             }
 
-            fun bind(faculty: DataClassFaculty) {
+            fun bind(faculty: Faculty) {
                 moduleAdapter = AdapterModule(faculty.modules)
                 faculty_name.text = faculty.faculty_name
                 moduleAdapter.updateModules(faculty.modules)

@@ -1,6 +1,6 @@
 package com.example.usthb9raya.dataClass
 
-data class DataClassSousModule(
+data class SousModule(
     val sous_module_name : String ,
     val sous_module_course_link : String ,
     val sous_module_tp_link : String ,

@@ -7,10 +7,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.usthb9raya.dataClass.DataClassModule
+import com.example.usthb9raya.dataClass.Module
 import com.example.usthb9raya.R
 
-class AdapterModule(private var itemList: List<DataClassModule>) :
+class AdapterModule(private var itemList: List<Module>) :
     RecyclerView.Adapter<AdapterModule.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -50,7 +50,7 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
 
         }
 
-        fun bind(module: DataClassModule) {
+        fun bind(module: Module) {
             module_name.text = module.module_name
 
 
@@ -83,7 +83,7 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
 
     override fun getItemCount(): Int = itemList.size
 
-    fun updateModules(newModules: List<DataClassModule>) {
+    fun updateModules(newModules: List<Module>) {
         itemList = newModules
         notifyDataSetChanged()
     }

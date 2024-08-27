@@ -1,6 +1,6 @@
 package com.example.usthb9raya.dataClass
 
-data class DataClassModule(
+data class Module(
 
     val module_name : String ,
     val course_link : String ,
@@ -8,6 +8,6 @@ data class DataClassModule(
     val tp_link : String ,
     val exams_link : String ,
     val others_link : String ,
-    val submodules: List<DataClassSousModule>
+    val submodules: List<SousModule>
 
 )

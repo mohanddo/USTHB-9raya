@@ -1,0 +1,199 @@
+[
+  {
+    "faculty": "Faculté D'informatique",
+    "modules": [
+      {
+        "module": "Algorithmes et Structures de données",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Algorithmes et Structures de données 1",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1JvzYJJXK05MR44Rqm0jLxdrh0bB6Ub-X",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1HpkMx7Z-vCgwPknv-5w9c92HWMW0RCnA",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1chREmD8XFoE_Qlq2JNvzYeROLU0nQcZT",
+            "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1hDDzyQJdJO5Uzo9kmwOhYRYuodOhXEJR",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1EMDXd9u6OVK9mnbgLnOmt33Brl8cIqCB"
+          },
+          {
+            "sousModuleName": "Algorithmes et Structures de données 2",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/15jPf7lAhBCDwRmoAR8u7bU8C1G2WMIRr",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1XU6vcsiA74dAr054byz5nLeEUlM2CN__",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/19JqTflQrg9FaSVoqM3MzJ7odRumDJg1N",
+            "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1wJPmq-OnoH84XPvzmh52rRavUlPNVH6x",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/18NUjAE7wtFEG8MVHXvifnPN7UektMFD1"
+          }
+        ]
+      },
+      {
+        "module": "Codage et théorie de l'information",
+        "course": "https://drive.google.com/drive/u/1/folders/1ZHNBZSobH3N6xjWWyOtFidYXCccTb2cj",
+        "tp": "https://drive.google.com/drive/u/1/folders/1MtFPmv0ddz4HNV0mIscdn0AiyQKFE-l7",
+        "td": "https://drive.google.com/drive/u/1/folders/1L_WrVS8bJcmz29aEj1t6UdOND7U3QgL0",
+        "exams": "https://drive.google.com/drive/u/1/folders/1N6b2Pc99EKd6QaJ23lAALgCeoVEblDyr",
+        "others": "https://drive.google.com/drive/u/1/folders/15sGX9BEraFRYOp2ROSl2-K_haqi5s14a",
+        "sousModules": []
+      },
+      {
+        "module": "Architecture des ordinateurs",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Architecture des ordinateurs 1",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/12cJSFdUm7DnEbduvH47vz7X51Jx8cvH6",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1g54G1qmTYQ2UzO2x-m28Cx-YSifSC806",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1cJrUpIn2gpk017N61uXyJTpqwE0ifxIh",
+            "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1KovsnAU7DctFOvEW_5NpMelSP1A_Eyje",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1iRjYChZjWt35a4pV9tPpfLCTvkYjNaaI"
+          },
+          {
+            "sousModuleName": "Architecture des ordinateurs 2",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1_Ap3zTDC2e4HlDuir3N5eTA__F-dIy0R",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1nZDTNHnNQcWhHUBdF7NzNE9jj813DKjW",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1V7LrpVl1H7RFDolZqDQrzDif1qbVXrbO",
+            "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1jvXlRbqX0DlZV-sU7cmzLRNAjojajuO0",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1nZDTNHnNQcWhHUBdF7NzNE9jj813DKjW"
+          }
+        ]
+      },
+      {
+        "module": "Bases de données",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Introduction aux bases de données",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1QrsRjZWk-6iozFgRytQ2hHzenxTNYvIN",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1Gq0VcTMA8k4l34IGgvuEasen1LVRTrfB",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1cKu8EMkMNY2eM_xBEZ8Mo4A1hchHoXnM",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1jKnlRevTh3Vb7QSwzqOuYsdSGytobEh8",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1Aa_lSRO0qHf-Zi5gKT-wqzWFsyovo5o_"
+          },
+          {
+            "sousModuleName": "Base de données 1",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1AoXZSo89Bq83OAnCkC2qBvXVQeAaUIYZ",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1YXSQrxLlSGS7fRAOfVDxY9j29ZL2PjO0",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1G8PUrWJFl8Dycy1XuGC5c0wQrdjaX3nM",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1G8PUrWJFl8Dycy1XuGC5c0wQrdjaX3nM",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1KEZLW8cIJlTSuVnJMSdiS3Ug_n9uD5LN"
+          },
+          {
+            "sousModuleName": "bases de données avancées",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/11XG4E4nUZwQqlBX9xJwaACVpHxrUtYHu",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/10DdBS2KEP-wW-A3fVoWUT81F0jlGfmpO",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1ZOc1QGUBa8D5M5lu_bEX5dRbAp4wU5dz",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1PXsKtElqgN4Z8zPKMlEF_Hni3Yl4uE1c",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1apk9tPi0DyhDbnjQZXAlPlns8HxINeJR"
+          }
+        ]
+      },
+      {
+        "module": "Technologies de l'information et des communications",
+        "course": "https://drive.google.com/drive/u/1/folders/1odQM0dwJgq0nOlV7I5vpwxYvxoHIacYS",
+        "tp": "https://drive.google.com/drive/u/1/folders/15IoK-JK2iFZtynzg6dC2TlwP4mkgaRFN",
+        "td": "https://drive.google.com/drive/u/1/folders/1x7u7sjxsXdTgkHn7mwDoidx5-EbQUmb5",
+        "exams": "https://drive.google.com/drive/u/1/folders/16vNdupmpEwM8fBIuS5cdEth6Ul3kq-Gn",
+        "others": "https://drive.google.com/drive/u/1/folders/15sLD3EamF8xbEVzWr-ArZMBH35gwbGWk",
+        "sousModules": []
+      },
+       {
+        "module": "Outils de programmation mathématique",
+        "course": "",
+        "tp": "",
+        "td": "",
+         "exams": "",
+         "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Outils de programmation mathématique 1",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1VgX5QsoqQpqY7tOUZPzO6fwuzrMNjj0H",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1cLpL8uNympg8-yDiU5xVP-LLEbdTrFL8",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1WG3i2IHvIyZUhbWQNuTkN5usK9L0-_wZ",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1AbB5OeMc8J7FNIPyFbO00pEGJu2If2OV",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1nsjc8q2l0JZi_SyHGb0KiS6uTlSBaIl9"
+          },
+          {
+            "sousModuleName": "Outils de programmation mathématique 2",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1ZoPqhXALCjHfyQe5AHFe9k3Gfp11vfWb",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1ihjTNWPJq8tPHdEPohXQ-rjLGtTtC86B",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1ZBhJG2-Dr7ZKi85KaD8Q8QPmN0_Z_fif",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1owGWOkDRqgnE2mbM74FVt7VlG9LJ3OmV",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/10o3HiUnNF2dK-Zlq2ocmB6v4GpdDBE4v"
+          },
+          {
+            "sousModuleName": "Outils de programmation mathématique 3",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1D67OnqSfBQArxF_oL-siyakkJOEVE0nG",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1GZ_unqp4xBIS8gF_B6T2omZCtTfdq_5w",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1UXn5QLmbAcJ5A6n0I6X5oUs3PfHns1bT",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1BvrO90bXCyMLhKhgRZHAq1T7ukcCgd_B",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1L14Iik6Hm0KMNyX_wHgi10DeKqkpMxYW"
+          }
+        ]
+      },
+      {
+        "module": "Programmation orientée objet",
+        "course": "https://drive.google.com/drive/u/1/folders/1KLokOMyacHA-FNUXEMGWnothYgmqurvs",
+        "tp": "https://drive.google.com/drive/u/1/folders/1JNoP9m6HJf37QTWpjj6g0lvbDDASM6lH",
+        "td": "https://drive.google.com/drive/u/1/folders/1GBOeUYb5aRa1Tu3_M7lB4yL_Jcz26enw",
+        "exams": "https://drive.google.com/drive/u/1/folders/1_7TUsC0EDrLOUmY7fwcjcVqK2uNfhfvD",
+        "others": "https://drive.google.com/drive/u/1/folders/1mvY6XJ5XmUzDRSR5yPQBIUuPV1uZseZO",
+        "sousModules": []
+      },
+      {
+        "module": "Systèmes d'exploitation",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Systèmes d'exploitation 1",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/17dF1igVd3eEQHoJaUqYvpcov51D01A8b",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1rAfqTioz3gygbI8IP3PvPL6iThxMH3l-",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1lbyN4QCTGxseFvKDGm5C6_v276UulQvx",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1U5SCoZZ2d8vWBCaeSWU55ujKF1Zkfxu7",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1SNbhImh-JTiPQG98taYqObwHyzEYEM3S"
+          },
+          {
+            "sousModuleName": "Systèmes d'exploitation 2",
+            "sousModuleCourse": "https://drive.google.com/drive/u/1/folders/1Ir15AOOdaTI2DAIzyH-tR4dY04NjTo47",
+            "sousModuleTp": "https://drive.google.com/drive/u/1/folders/1WgU77bNpKemI2GNlfX5WIsdArNpZfHDY",
+            "sousModuleTd": "https://drive.google.com/drive/u/1/folders/1EpSy7O4btiXvnH-veW5h5BweL7bJbMtc",
+             "sousModuleExams": "https://drive.google.com/drive/u/1/folders/1GXCGH_l0KxaOApFKn0aqYEdPGjJkkncR",
+            "sousModuleOthers": "https://drive.google.com/drive/u/1/folders/1es9ugj4bBMjBi4e-4fPaaA6Eus67zw1D"
+          }
+        ]
+      },
+      {
+        "module": "ingénierie logicielle",
+        "course": "https://drive.google.com/drive/u/1/folders/1JeIVrQTu2_KWjg48-eCksRBrgFvJqngp",
+        "tp": "https://drive.google.com/drive/u/1/folders/1rV7bzH8LVAvvghrhx3331v3OiytQm0Pv",
+        "td": "https://drive.google.com/drive/u/1/folders/1wdzwblxpWJF7gKdoQn9ZNX-WBe_l89Hf",
+        "exams": "https://drive.google.com/drive/u/1/folders/1twCzzBaA_y6apodsRaTq1-Dwp8qF1Mj4",
+        "others": "https://drive.google.com/drive/u/1/folders/1F74XPt45_MEJyCUlubOAsgq9ZzC9hP_x",
+        "sousModules": []
+      },
+       {
+        "module": "Programmation Web",
+        "course": "https://drive.google.com/drive/u/1/folders/1Jn4fh_8ZW7K_Q_0yEKorb-tk8z3B5f6b",
+        "tp": "https://drive.google.com/drive/u/1/folders/1sU_a7ZCI6IIqWloqh9D81t0HXcDGLnxO",
+        "td": "https://drive.google.com/drive/u/1/folders/1ngTo56seVOWCvxvTn4sQ2YZwgM1g9GPi",
+         "exams": "https://drive.google.com/drive/u/1/folders/1tlaMnn6EvQbyhqc2lH3QAfLId5Hok3Cs",
+        "others": "https://drive.google.com/drive/u/1/folders/16hduK4qaMZOrvZnMt3Roa0h6JczxqTVB",
+        "sousModules": []
+      }
+    ]
+  }
+]
+

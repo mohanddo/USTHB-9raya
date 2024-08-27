@@ -31,7 +31,7 @@
             android:textSize="16sp"
             android:paddingStart="8dp"
             android:gravity="center_vertical"
-            android:text=" module name"
+            android:text="module name"
             android:textStyle="normal" />
 
         <ImageView
@@ -83,7 +83,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="Course"
+                android:text="@string/cours"
                 android:textStyle="normal" />
 
             <ImageView
@@ -120,7 +120,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="TP"
+                android:text="@string/tp"
                 android:textStyle="normal" />
 
             <ImageView
@@ -157,7 +157,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="TD"
+                android:text="@string/td"
                 android:textStyle="normal"/>
 
             <ImageView
@@ -194,7 +194,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="TD"
+                android:text="@string/examens"
                 android:textStyle="normal"/>
 
             <ImageView
@@ -231,7 +231,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="TD"
+                android:text="@string/autres"
                 android:textStyle="normal"/>
 
             <ImageView

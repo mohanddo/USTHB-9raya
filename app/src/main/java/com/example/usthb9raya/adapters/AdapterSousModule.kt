@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.usthb9raya.dataClass.DataClassSousModule
+import com.example.usthb9raya.dataClass.SousModule
 import com.example.usthb9raya.R
 
 
-class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
+class AdapterSousModule (private var sousModule: List<SousModule>) :
     RecyclerView.Adapter<AdapterSousModule.MyViewHolder>() {
 
 
@@ -70,7 +70,7 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
             return sousModule.size
         }
 
-        fun updateSousModules(newSousModules: List<DataClassSousModule>) {
+        fun updateSousModules(newSousModules: List<SousModule>) {
             sousModule = newSousModules
             notifyDataSetChanged()
         }
