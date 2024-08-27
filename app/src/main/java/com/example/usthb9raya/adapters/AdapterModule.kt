@@ -18,7 +18,6 @@ class AdapterModule(
     private val context: Context
 ) : RecyclerView.Adapter<AdapterModule.MyViewHolder>() {
 
-
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val module: LinearLayout = itemView.findViewById(R.id.linear_module)
         val course: LinearLayout = itemView.findViewById(R.id.linear_course)
@@ -28,9 +27,8 @@ class AdapterModule(
         val others: LinearLayout = itemView.findViewById(R.id.linear_others)
         val module_name: TextView = itemView.findViewById(R.id.text_view_module)
         val submodule: RecyclerView = itemView.findViewById(R.id.submodule_recycler_view)
-        val module_arrow : ImageView = itemView.findViewById(R.id.ic_arrow_module)
-        val module_heart : ImageView = itemView.findViewById(R.id.ic_favorite_module)
-
+        val module_arrow: ImageView = itemView.findViewById(R.id.ic_arrow_module)
+        val module_heart: ImageView = itemView.findViewById(R.id.ic_favorite_module)
 
         private var sousModuleAdapter = AdapterSousModule(emptyList(), context)
 
@@ -42,54 +40,44 @@ class AdapterModule(
                     if (isVisible) {
                         submodule.visibility = View.GONE
                         module.setBackgroundResource(R.drawable.bck_textview)
-                        module_arrow.setImageResource(R.drawable.ic_arrow_down)
+                        module_arrow.setImageResource(R.drawable.ic_arrow_right) // Changed to right
                     } else {
                         submodule.visibility = View.VISIBLE
                         module.setBackgroundResource(R.drawable.bck_click_textview)
-                        module_arrow.setImageResource(R.drawable.ic_arrow_right)
+                        module_arrow.setImageResource(R.drawable.ic_arrow_down) // Changed to down
                         if (submodule.adapter == null) {
                             submodule.layoutManager = LinearLayoutManager(context)
                             submodule.adapter = sousModuleAdapter
                         }
                     }
                 } else {
-
                     toggleCourseTpTdVisibility()
                 }
             }
-
-
         }
-
-
 
         fun bind(module: Module) {
             module_name.text = module.module_name
-
 
             val hasSubmodules = module.submodules.isNotEmpty()
             submodule.visibility = if (hasSubmodules) View.GONE else View.VISIBLE
             sousModuleAdapter.updateSousModules(module.submodules)
 
             course.setOnClickListener {
-                Utils.openDriveLink(context, module.course_link )
+                Utils.openDriveLink(context, module.course_link)
             }
             tp.setOnClickListener {
-                Utils.openDriveLink(context, module.tp_link )
+                Utils.openDriveLink(context, module.tp_link)
             }
-
             td.setOnClickListener {
-                Utils.openDriveLink(context, module.td_link )
+                Utils.openDriveLink(context, module.td_link)
             }
-
             exams.setOnClickListener {
-                Utils.openDriveLink(context, module.exams_link )
+                Utils.openDriveLink(context, module.exams_link)
             }
-
             others.setOnClickListener {
-                Utils.openDriveLink(context, module.others_link )
+                Utils.openDriveLink(context, module.others_link)
             }
-
         }
 
         private fun toggleCourseTpTdVisibility() {
@@ -102,6 +90,8 @@ class AdapterModule(
             others.visibility = if (isVisible) View.GONE else View.VISIBLE
             val bckSet = if (isVisible) R.drawable.bck_textview else R.drawable.bck_click_textview
             module.setBackgroundResource(bckSet)
+            val bckImage = if (isVisible) R.drawable.ic_arrow_right else R.drawable.ic_arrow_down
+            module_arrow.setImageResource(bckImage)
         }
     }
 
@@ -121,6 +111,7 @@ class AdapterModule(
         notifyDataSetChanged()
     }
 }
+
 
 
 

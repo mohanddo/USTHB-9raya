@@ -21,7 +21,7 @@ class AdapterFaculty(
         val faculty_name: TextView = itemView.findViewById(R.id.text_view_faculty)
         val innerRecyclerView: RecyclerView = itemView.findViewById(R.id.inner_recycler_view)
         val faculty: LinearLayout = itemView.findViewById(R.id.linear_faculty)
-        val faculty_arrow : ImageView = itemView.findViewById(R.id.ic_arrow_faculty)
+        val faculty_arrow: ImageView = itemView.findViewById(R.id.ic_arrow_faculty)
 
         private var moduleAdapter: AdapterModule? = null
 
@@ -31,11 +31,11 @@ class AdapterFaculty(
                 if (isVisible) {
                     innerRecyclerView.visibility = View.GONE
                     faculty.setBackgroundResource(R.drawable.bck_textview)
-                    faculty_arrow.setImageResource(R.drawable.ic_arrow_down)
+                    faculty_arrow.setImageResource(R.drawable.ic_arrow_right) // Arrow pointing right
                 } else {
                     innerRecyclerView.visibility = View.VISIBLE
                     faculty.setBackgroundResource(R.drawable.bck_click_textview)
-                    faculty_arrow.setImageResource(R.drawable.ic_arrow_right)
+                    faculty_arrow.setImageResource(R.drawable.ic_arrow_down) // Arrow pointing down
 
                     if (moduleAdapter == null) {
                         moduleAdapter = AdapterModule(emptyList(), context)
