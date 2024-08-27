@@ -20,6 +20,8 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
             val sous_module_course: LinearLayout = itemView.findViewById(R.id.linear_sous_module_course)
             val sous_module_tp: LinearLayout = itemView.findViewById(R.id.linear_sous_module_tp)
             val sous_module_td: LinearLayout = itemView.findViewById(R.id.linear_sous_module_td)
+            val sous_module_exams: LinearLayout = itemView.findViewById(R.id.linear_sous_module_exams)
+            val sous_module_others: LinearLayout = itemView.findViewById(R.id.linear_sous_module_others)
             val sous_module_module_name: TextView = itemView.findViewById(R.id.text_view_sous_module)
 
         }
@@ -41,6 +43,8 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
             holder.sous_module_course.visibility = View.GONE
             holder.sous_module_tp.visibility = View.GONE
             holder.sous_module_td.visibility = View.GONE
+            holder.sous_module_exams.visibility = View.GONE
+            holder.sous_module_others.visibility = View.GONE
 
 
             holder.sous_module.setOnClickListener {
@@ -48,11 +52,15 @@ class AdapterSousModule (private var sousModule: List<DataClassSousModule>) :
                     holder.sous_module_course.visibility = View.VISIBLE
                     holder.sous_module_tp.visibility = View.VISIBLE
                     holder.sous_module_td.visibility = View.VISIBLE
+                    holder.sous_module_exams.visibility = View.VISIBLE
+                    holder.sous_module_others.visibility = View.VISIBLE
                     holder.sous_module.setBackgroundResource(R.drawable.bck_click_textview)
                 } else {
                     holder.sous_module_course.visibility = View.GONE
                     holder.sous_module_tp.visibility = View.GONE
                     holder.sous_module_td.visibility = View.GONE
+                    holder.sous_module_exams.visibility = View.GONE
+                    holder.sous_module_others.visibility = View.GONE
                     holder.sous_module.setBackgroundResource(R.drawable.bck_textview)
                 }
             }

@@ -36,10 +36,18 @@
             android:textStyle="normal" />
 
         <ImageView
-            android:id="@+id/ic_favorite"
+            android:id="@+id/ic_favorite_module"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_heart"
+            android:paddingEnd="8dp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ic_arrow_module"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
             android:paddingEnd="8dp">
         </ImageView>
 
@@ -162,6 +170,80 @@
 
             <ImageView
                 android:id="@+id/ic_arrow_td"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_right"
+                android:paddingEnd="8dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_exams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bck_textview"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_ic_design_td_tp_course"
+                android:src="@drawable/ic_exam"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:gravity="center_vertical"
+                android:text="TD"
+                android:textStyle="normal"/>
+
+            <ImageView
+                android:id="@+id/ic_arrow_exams"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_right"
+                android:paddingEnd="8dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bck_textview"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_ic_design_td_tp_course"
+                android:src="@drawable/ic_others"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:gravity="center_vertical"
+                android:text="TD"
+                android:textStyle="normal"/>
+
+            <ImageView
+                android:id="@+id/ic_arrow_others"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_arrow_right"

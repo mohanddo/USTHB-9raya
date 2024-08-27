@@ -18,11 +18,12 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
         val course: LinearLayout = itemView.findViewById(R.id.linear_course)
         val tp: LinearLayout = itemView.findViewById(R.id.linear_tp)
         val td: LinearLayout = itemView.findViewById(R.id.linear_td)
+        val exams: LinearLayout = itemView.findViewById(R.id.linear_exams)
+        val others: LinearLayout = itemView.findViewById(R.id.linear_others)
         val module_name: TextView = itemView.findViewById(R.id.text_view_module)
         val submodule: RecyclerView = itemView.findViewById(R.id.submodule_recycler_view)
 
 
-        // Adapter for submodules
         private val sousModuleAdapter = AdapterSousModule(emptyList())
 
         init {
@@ -46,6 +47,7 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
                     toggleCourseTpTdVisibility()
                 }
             }
+
         }
 
         fun bind(module: DataClassModule) {
@@ -59,9 +61,12 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
 
         private fun toggleCourseTpTdVisibility() {
             val isVisible = course.visibility == View.VISIBLE
+
             course.visibility = if (isVisible) View.GONE else View.VISIBLE
             tp.visibility = if (isVisible) View.GONE else View.VISIBLE
             td.visibility = if (isVisible) View.GONE else View.VISIBLE
+            exams.visibility = if (isVisible) View.GONE else View.VISIBLE
+            others.visibility = if (isVisible) View.GONE else View.VISIBLE
             val bckSet = if (isVisible) R.drawable.bck_textview else R.drawable.bck_click_textview
             module.setBackgroundResource(bckSet)
         }
