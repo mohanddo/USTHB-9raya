@@ -7,12 +7,16 @@
         "courseName": "Course C",
         "tpName": "TP C",
         "tdName": "TD C",
+        "exams": "Exams C",
+        "others": "Others C",
         "sousModules": [
           {
             "sousModuleName": "software engineering",
             "sousModuleCourse": "software course",
             "sousModuleTp": "software tp",
-            "sousModuleTd": "software td"
+            "sousModuleTd": "software td",
+            "sousModuleExams": "software exams",
+            "sousModuleOthers": "software others"
           }
         ]
       },
@@ -21,12 +25,16 @@
         "courseName": "Course D",
         "tpName": "TP D",
         "tdName": "TD D",
+        "exams": "Exams D",
+        "others": "Others D",
         "sousModules": [
           {
             "sousModuleName": "circuit analysis",
             "sousModuleCourse": "circuit course",
             "sousModuleTp": "circuit tp",
-            "sousModuleTd": "circuit td"
+            "sousModuleTd": "circuit td",
+            "sousModuleExams": "circuit exams",
+            "sousModuleOthers": "circuit others"
           }
         ]
       }
@@ -40,6 +48,8 @@
         "courseName": "Course E",
         "tpName": "TP E",
         "tdName": "TD E",
+        "exams": "Exams E",
+        "others": "Others E",
         "sousModules": []
       },
       {
@@ -47,16 +57,22 @@
         "courseName": "Course F",
         "tpName": "TP F",
         "tdName": "TD F",
+        "exams": "Exams F",
+        "others": "Others F",
         "sousModules": [
           {
             "sousModuleName": "ethics",
             "sousModuleCourse": "ethics course",
             "sousModuleTp": "ethics tp",
-            "sousModuleTd": "ethics td"
+            "sousModuleTd": "ethics td",
+            "sousModuleExams": "ethics exams",
+            "sousModuleOthers": "ethics others"
           }
         ]
       }
     ]
   }
 ]
+
+
 

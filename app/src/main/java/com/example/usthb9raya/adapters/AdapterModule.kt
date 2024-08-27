@@ -1,5 +1,6 @@
 package com.example.usthb9raya.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.usthb9raya.dataClass.DataClassModule
 import com.example.usthb9raya.R
+import com.example.usthb9raya.Utils.Utils
 
-class AdapterModule(private var itemList: List<DataClassModule>) :
-    RecyclerView.Adapter<AdapterModule.MyViewHolder>() {
+class AdapterModule(
+    private var itemList: List<DataClassModule>,
+    private val context: Context
+) : RecyclerView.Adapter<AdapterModule.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val module: LinearLayout = itemView.findViewById(R.id.linear_module)
@@ -23,40 +27,59 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
         val module_name: TextView = itemView.findViewById(R.id.text_view_module)
         val submodule: RecyclerView = itemView.findViewById(R.id.submodule_recycler_view)
 
-
-        private val sousModuleAdapter = AdapterSousModule(emptyList())
+        private var sousModuleAdapter = AdapterSousModule(emptyList(), context)
 
         init {
             module.setOnClickListener {
                 val hasSubmodules = itemList[adapterPosition].submodules.isNotEmpty()
                 if (hasSubmodules) {
                     val isVisible = submodule.visibility == View.VISIBLE
-                  if (isVisible){
-                      submodule.visibility =   View.GONE
-                      module.setBackgroundResource(R.drawable.bck_textview)
-                    }else{
-                      submodule.visibility =  View.VISIBLE
-                      module.setBackgroundResource(R.drawable.bck_click_textview)
-                    }
-                    if (!isVisible) {
-                        submodule.layoutManager = LinearLayoutManager(itemView.context)
-                        submodule.adapter = sousModuleAdapter
+                    if (isVisible) {
+                        submodule.visibility = View.GONE
+                        module.setBackgroundResource(R.drawable.bck_textview)
+                    } else {
+                        submodule.visibility = View.VISIBLE
+                        module.setBackgroundResource(R.drawable.bck_click_textview)
+                        if (submodule.adapter == null) {
+                            submodule.layoutManager = LinearLayoutManager(context)
+                            submodule.adapter = sousModuleAdapter
+                        }
                     }
                 } else {
-
                     toggleCourseTpTdVisibility()
                 }
             }
 
+
         }
+
+
 
         fun bind(module: DataClassModule) {
             module_name.text = module.module_name
-
-
             val hasSubmodules = module.submodules.isNotEmpty()
             submodule.visibility = if (hasSubmodules) View.GONE else View.VISIBLE
             sousModuleAdapter.updateSousModules(module.submodules)
+
+            course.setOnClickListener {
+                Utils.openDriveLink(context, module.course_link )
+            }
+            tp.setOnClickListener {
+                Utils.openDriveLink(context, module.tp_link )
+            }
+
+            td.setOnClickListener {
+                Utils.openDriveLink(context, module.td_link )
+            }
+
+            exams.setOnClickListener {
+                Utils.openDriveLink(context, module.exams_link )
+            }
+
+            others.setOnClickListener {
+                Utils.openDriveLink(context, module.others_link )
+            }
+
         }
 
         private fun toggleCourseTpTdVisibility() {
@@ -88,4 +111,6 @@ class AdapterModule(private var itemList: List<DataClassModule>) :
         notifyDataSetChanged()
     }
 }
+
+
 
