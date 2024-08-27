@@ -17,12 +17,12 @@
         android:layout_weight="1"/>
 
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="8dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/light_white">
+        android:background="@drawable/bck_cardview_design"
+        app:cardBackgroundColor="@color/white">
 
 
         <LinearLayout
@@ -140,7 +140,7 @@
         </LinearLayout>
 
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
