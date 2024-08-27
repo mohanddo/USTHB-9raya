@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.usthb9raya.adapters.AdapterFaculty
-import com.example.usthb9raya.dataClass.DataClassFaculty
-import com.example.usthb9raya.dataClass.DataClassModule
-import com.example.usthb9raya.dataClass.DataClassSousModule
+import com.example.usthb9raya.dataClass.Faculty
+import com.example.usthb9raya.dataClass.Module
+import com.example.usthb9raya.dataClass.SousModule
 import com.example.usthb9raya.databinding.FragmentHomeBinding
+import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import java.io.InputStream
 
@@ -27,7 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
 
-        val jsonArray = readJsonFromRaw(requireContext(), R.raw.drive_data)
+        val jsonArray = readJsonFromRaw(requireContext(), R.raw.faculties_modules)
         val faculties = parseJson(jsonArray)
 
         binding.recyclerView.adapter = AdapterFaculty(faculties, requireContext())
@@ -38,53 +40,48 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = null
     }
 
-
+    // Function to read JSON data from the raw resource file
     private fun readJsonFromRaw(context: Context, resourceId: Int): JSONArray {
         val inputStream: InputStream = context.resources.openRawResource(resourceId)
         val json = inputStream.bufferedReader().use { it.readText() }
         return JSONArray(json)
     }
 
+    // Function to parse JSON data into a list of DataClassFaculty objects
+    private fun parseJson(jsonArray: JSONArray): List<Faculty> {
+        val facultyList = mutableListOf<Faculty>()
 
-    private fun parseJson(jsonArray: JSONArray): List<DataClassFaculty> {
-        val facultyList = mutableListOf<DataClassFaculty>()
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
-            val facultyName = jsonObject.getString("facultyName")
+            val faculty = jsonObject.getString("faculty")
             val modulesArray = jsonObject.getJSONArray("modules")
-            val moduleList = mutableListOf<DataClassModule>()
+            val moduleList = mutableListOf<Module>()
+
             for (j in 0 until modulesArray.length()) {
                 val moduleObject = modulesArray.getJSONObject(j)
-                val moduleName = moduleObject.getString("moduleName")
-                val courseName = moduleObject.getString("courseName")
-                val tpName = moduleObject.getString("tpName")
-                val tdName = moduleObject.getString("tdName")
-                val exams = moduleObject.getString("exams")  // Added field
-                val others = moduleObject.getString("others") // Added field
+                val module = moduleObject.getString("module")
+                val courseLink = moduleObject.getString("course")
+                val tpLink = moduleObject.getString("tp")
+                val tdLink = moduleObject.getString("td")
+                val examsLink = moduleObject.getString("exams")
+                val othersLink = moduleObject.getString("others")
                 val sousModulesArray = moduleObject.getJSONArray("sousModules")
-                val sousModuleList = mutableListOf<DataClassSousModule>()
+                val sousModuleList = mutableListOf<SousModule>()
+
                 for (k in 0 until sousModulesArray.length()) {
                     val sousModuleObject = sousModulesArray.getJSONObject(k)
-                    val sousModuleName = sousModuleObject.getString("sousModuleName")
-                    val sousModuleCourse = sousModuleObject.getString("sousModuleCourse")
-                    val sousModuleTp = sousModuleObject.getString("sousModuleTp")
-                    val sousModuleTd = sousModuleObject.getString("sousModuleTd")
-                    val sousModuleExams = sousModuleObject.optString("sousModuleExams")
-                    val sousModuleOthers = sousModuleObject.optString("sousModuleOthers")
-                    sousModuleList.add(
-                        DataClassSousModule(
-                            sousModuleName, sousModuleCourse, sousModuleTp, sousModuleTd,
-                            sousModuleExams, sousModuleOthers
-                        )
-                    )
+                    val sousModule = sousModuleObject.getString("sousModuleName")
+                    val sousModuleCourseLink = sousModuleObject.getString("sousModuleCourse")
+                    val sousModuleTpLink = sousModuleObject.getString("sousModuleTp")
+                    val sousModuleTdLink = sousModuleObject.getString("sousModuleTd")
+                    val sousModuleExamsLink = sousModuleObject.getString("sousModuleExams")
+                    val sousModuleOthersLink = sousModuleObject.getString("sousModuleOthers")
+                    sousModuleList.add(SousModule(sousModule, sousModuleCourseLink, sousModuleTpLink, sousModuleTdLink,
+                        sousModuleExamsLink, sousModuleOthersLink))
                 }
-                moduleList.add(
-                    DataClassModule(
-                        moduleName, courseName, tpName, tdName, exams, others, sousModuleList
-                    )
-                )
+                moduleList.add(Module(module, courseLink, tpLink, tdLink, examsLink, othersLink, sousModuleList))
             }
-            facultyList.add(DataClassFaculty(facultyName, moduleList))
+            facultyList.add(Faculty(faculty, moduleList))
         }
         return facultyList
     }

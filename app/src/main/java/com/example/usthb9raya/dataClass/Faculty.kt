@@ -1,6 +1,6 @@
 package com.example.usthb9raya.dataClass
 
-data class DataClassFaculty(
+data class Faculty(
     val faculty_name : String ,
-    val modules : List<DataClassModule>
+    val modules : List<Module>
 )
