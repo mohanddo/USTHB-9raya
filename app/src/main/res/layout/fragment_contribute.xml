@@ -9,14 +9,129 @@
     android:orientation="vertical"
     tools:context=".ContributeFragment">
 
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:text="Contribute"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="16dp"
+                android:ems="10"
+                android:hint="@string/full_name"
+                android:inputType="text"
+                android:minHeight="48dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"/>
+
+            <TextView
+                android:id="@+id/faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:ems="10"
+                android:textSize="18sp"
+                android:hint="@string/faculty"
+                android:minHeight="48dp"/>
+
+            <EditText
+                android:id="@+id/module"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:ems="10"
+                android:hint="@string/module"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:minHeight="48dp"/>
 
 
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center_vertical"
+                android:ems="10"
+                android:textSize="18sp"
+                android:hint="@string/type"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:drawablePadding="8dp"
+                android:minHeight="48dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/butt_addFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="44dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Add file"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_marginVertical="8dp"
+                />
+
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="5"
+                android:layout_marginHorizontal="24dp"
+                android:ems="10"
+                android:hint="@string/comment"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="16dp"
+                android:gravity="top"
+                android:lineSpacingExtra="2dp"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/butt_Contribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="44dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/contribute"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="24dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

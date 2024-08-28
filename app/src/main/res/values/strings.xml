@@ -8,4 +8,24 @@
     <string name="td">TD</string>
     <string name="tp">TP</string>
     <string name="cours">Cours</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="faculty">Faculty</string>
+    <string name="module">Module</string>
+    <string name="type">type</string>
+    <string name="comment">comment</string>
+    <string name="contribute">Contribute</string>
+
+    <string-array name="faculties">
+        <item value="Faculté D'informatique">Faculté </item>
+        <item value="Faculté De Chimie">Faculté De Chimie</item>"
+    </string-array>
+
+    <string-array name="type">
+        <item value="tp">TP</item>
+        <item value="td">TD</item>
+        <item value="others">others</item>
+        <item value="Courses">Courses</item>
+        <item value="exams">Exams</item>
+    </string-array>
 </resources>
