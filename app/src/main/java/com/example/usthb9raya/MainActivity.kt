@@ -36,11 +36,6 @@ class MainActivity : AppCompatActivity() {
 
         setCurrentFragment(HomeFragment())
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.title = "Home"
-
-
         val homeFragment = HomeFragment()
         val favoritesFragment = FavoritesFragment()
         val contributeFragment = ContributeFragment()
