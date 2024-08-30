@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat.recreate
 import com.example.usthb9raya.Utils.FirebaseUtil.contributionsRef
 import com.example.usthb9raya.Utils.FirebaseUtil.storageRef
 import com.example.usthb9raya.Utils.Utils
+import com.example.usthb9raya.Utils.Utils.getMimeType
 import com.example.usthb9raya.Utils.Utils.isEditTextEmpty
 import com.example.usthb9raya.Utils.Utils.isTextViewEmpty
 import com.example.usthb9raya.Utils.Utils.isValidEmail
@@ -42,10 +43,12 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var contributeButt: AppCompatButton
     private lateinit var cancelButt: ImageButton
     private var uploadTask: UploadTask? = null
+    private var mimeType: String? = null
 
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {
             fileUri = uri
+            mimeType = getMimeType(requireContext(), uri)
         }
 
     }
@@ -170,7 +173,8 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                         type.text.toString(),
                         comment.text.toString(),
                         downloadUri.toString(),
-                        contributionId
+                        contributionId,
+                        mimeType ?: "*/*"
                         )
                     saveFileContributionToDatabase(contribution)
                 }
