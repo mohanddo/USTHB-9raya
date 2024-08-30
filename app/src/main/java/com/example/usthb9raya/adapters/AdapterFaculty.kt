@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.usthb9raya.R
 import com.example.usthb9raya.dataClass.Faculty
 
-
 class AdapterFaculty(
     private val faculties: List<Faculty>,
     private val context: Context

@@ -7,5 +7,6 @@ data class Contribution(val fullName: String,
                         val type: String,
                         val comment: String?,
                         val fileUrl: String,
-                        val contributionId: String
+                        val contributionId: String,
+                        val timestamp: Long = System.currentTimeMillis()
 )
