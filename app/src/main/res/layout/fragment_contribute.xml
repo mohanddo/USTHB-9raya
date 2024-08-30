@@ -27,7 +27,9 @@
                 android:ems="10"
                 android:hint="@string/full_name"
                 android:inputType="text"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"/>
 
             <EditText
                 android:id="@+id/email"
@@ -38,7 +40,9 @@
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"/>
 
             <TextView
                 android:id="@+id/faculty"
@@ -50,7 +54,9 @@
                 android:ems="10"
                 android:textSize="18sp"
                 android:hint="@string/faculty"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"/>
 
             <EditText
                 android:id="@+id/module"
@@ -61,8 +67,9 @@
                 android:hint="@string/module"
                 android:inputType="text"
                 android:layout_marginBottom="16dp"
-                android:padding="8dp"
-                android:minHeight="48dp"/>
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"/>
 
 
             <TextView
@@ -75,22 +82,10 @@
                 android:textSize="18sp"
                 android:hint="@string/type"
                 android:layout_marginBottom="16dp"
-                android:padding="8dp"
                 android:drawablePadding="8dp"
-                android:minHeight="48dp"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/butt_addFile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="44dp"
-                android:layout_gravity="center_horizontal"
-                android:text="Add file"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                android:layout_marginVertical="8dp"
-                />
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"/>
 
             <EditText
                 android:id="@+id/comment"
@@ -105,9 +100,24 @@
                 android:gravity="top"
                 android:lineSpacingExtra="2dp"
                 android:lineSpacingMultiplier="1.2"
-                android:paddingStart="8dp"
-                android:paddingTop="8dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"
                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/butt_addFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="44dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Add file"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/bck_add_file_butt"/>
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/butt_Contribute"
@@ -116,10 +126,13 @@
                 android:layout_marginHorizontal="44dp"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/contribute"
-                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"
                 android:textSize="16sp"
                 android:textAllCaps="false"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bck_contribute"
                 />
 
             <LinearLayout

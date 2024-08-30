@@ -40,14 +40,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = null
     }
 
-    // Function to read JSON data from the raw resource file
+
     private fun readJsonFromRaw(context: Context, resourceId: Int): JSONArray {
         val inputStream: InputStream = context.resources.openRawResource(resourceId)
         val json = inputStream.bufferedReader().use { it.readText() }
         return JSONArray(json)
     }
 
-    // Function to parse JSON data into a list of DataClassFaculty objects
+
     private fun parseJson(jsonArray: JSONArray): List<Faculty> {
         val facultyList = mutableListOf<Faculty>()
 

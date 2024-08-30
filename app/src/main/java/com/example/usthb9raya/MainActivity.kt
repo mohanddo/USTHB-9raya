@@ -1,6 +1,6 @@
 package com.example.usthb9raya
 
-
+import FavoritesFragment
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -119,6 +119,5 @@ class MainActivity : AppCompatActivity() {
                 binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings))
             }
         }
-
     }
 }
