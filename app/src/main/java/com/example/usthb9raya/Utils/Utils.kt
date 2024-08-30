@@ -1,6 +1,7 @@
 package com.example.usthb9raya.Utils
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.text.TextUtils.replace
@@ -59,7 +60,7 @@ object Utils {
     }
 
     fun alertDialog(context: Context, title: String, message: String, positiveButtonMessage: String,
-                            negativeButtonMessage: String? = null, positiveButtonAction: () -> Unit, negativeButtonAction: (() -> Unit)? = null
+                            negativeButtonMessage: String? = null, positiveButtonAction: () -> Unit, negativeButtonAction: ((DialogInterface) -> Unit)? = null
     ) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle(title)
@@ -68,8 +69,8 @@ object Utils {
             positiveButtonAction.invoke()
         }
         negativeButtonMessage?.let {
-            builder.setNegativeButton(it) { _, _ ->
-                negativeButtonAction?.invoke()
+            builder.setNegativeButton(it) { dialog, _ ->
+                negativeButtonAction?.invoke(dialog)
             }
         }
 

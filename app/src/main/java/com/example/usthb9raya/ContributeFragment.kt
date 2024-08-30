@@ -6,10 +6,16 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.AppCompatButton
+import androidx.core.app.ActivityCompat.recreate
 import com.example.usthb9raya.Utils.FirebaseUtil.contributionsRef
 import com.example.usthb9raya.Utils.FirebaseUtil.storageRef
 import com.example.usthb9raya.Utils.Utils
@@ -18,6 +24,8 @@ import com.example.usthb9raya.Utils.Utils.isTextViewEmpty
 import com.example.usthb9raya.Utils.Utils.isValidEmail
 import com.example.usthb9raya.dataClass.Contribution
 import com.example.usthb9raya.databinding.FragmentContributeBinding
+import com.google.firebase.storage.StorageException
+import com.google.firebase.storage.UploadTask
 
 class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private var _binding: FragmentContributeBinding? = null
@@ -29,6 +37,12 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var type: TextView
     private lateinit var comment: EditText
     private var fileUri: Uri? = null
+    private lateinit var progressBar: ProgressBar
+    private lateinit var progressBarCancelButtContainer: LinearLayout
+    private lateinit var contributeButt: AppCompatButton
+    private lateinit var cancelButt: ImageButton
+    private var uploadTask: UploadTask? = null
+
     private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {
             fileUri = uri
@@ -40,14 +54,17 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentContributeBinding.bind(view)
 
+        progressBar = binding.progressBar
         fullName = binding.fullName
         email = binding.email
         faculty = binding.faculty
         module = binding.module
         type = binding.type
         comment = binding.comment
+        progressBarCancelButtContainer = binding.progressBarCancelButtContainer
 
-        binding.buttContribute.setOnClickListener {
+        contributeButt = binding.buttContribute
+        contributeButt.setOnClickListener {
             if(!isEditTextEmpty(fullName) &&
                 isValidEmail(email) &&
                 !isTextViewEmpty(faculty) &&
@@ -69,15 +86,30 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         }
 
         val facultyList = resources.getStringArray(R.array.faculties)
-        val facultyTextView = binding.faculty
-        facultyTextView.setOnClickListener {
-            alertDialog(facultyList, "Faculty", facultyTextView)
+        faculty.setOnClickListener {
+            alertDialog(facultyList, "Faculty", faculty)
         }
 
         val typeList = resources.getStringArray(R.array.type)
-        val typeTextView = binding.type
-        typeTextView.setOnClickListener {
-            alertDialog(typeList, "Type", typeTextView)
+        type.setOnClickListener {
+            alertDialog(typeList, "Type", type)
+        }
+
+        cancelButt = binding.buttCancel
+        cancelButt.setOnClickListener {
+            uploadTask?.pause()
+            Utils.alertDialog(requireContext(), "Cancel", "Are you sure you want to cancel?", "Yes", "No",
+                {
+                    uploadTask?.cancel()
+                    progressBarCancelButtContainer.visibility = View.GONE
+                    progressBar.progress = 0
+                    contributeButt.visibility = View.VISIBLE
+                },
+                {
+                    it.dismiss()
+                    uploadTask?.resume()
+                })
+
         }
     }
 
@@ -118,9 +150,18 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             val contributionId = "${System.currentTimeMillis()}_${uri.lastPathSegment}"
             val fileReference = storageRef.child("uploads").child(contributionId)
 
-            val uploadTask = fileReference.putFile(uri)
+            uploadTask = fileReference.putFile(uri)
 
-            uploadTask.addOnSuccessListener { _ ->
+            contributeButt.visibility = View.GONE
+            progressBarCancelButtContainer.visibility = View.VISIBLE
+
+            uploadTask?.addOnProgressListener { snapshot ->
+
+                val progress = (100.0 * snapshot.bytesTransferred / snapshot.totalByteCount).toInt()
+
+                progressBar.progress = progress
+            }
+                ?.addOnSuccessListener { _ ->
                 fileReference.downloadUrl.addOnSuccessListener { downloadUri ->
                     val contribution = Contribution(fullName.text.toString(),
                         email.text.toString(),
@@ -133,8 +174,13 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                         )
                     saveFileContributionToDatabase(contribution)
                 }
-            }.addOnFailureListener { exception ->
-                Toast.makeText(requireContext(), "Upload failed: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }?.addOnFailureListener { exception ->
+                    if (exception !is StorageException || exception.message != "User cancelled the upload") {
+                        Toast.makeText(requireContext(), "Upload failed: ${exception.message}", Toast.LENGTH_SHORT).show()
+                    }
+                    contributeButt.visibility = View.VISIBLE
+                    progressBarCancelButtContainer.visibility = View.GONE
+                    progressBar.progress = 0
             }
 
         } catch (e: Exception) {
@@ -164,15 +210,31 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             if (task.isSuccessful) {
                 Utils.alertDialog(requireContext(), "Thanks for the contribution", "You will receive a notification when your contribution is confirmed.",
                     "Ok", null, {
-                        parentFragmentManager.beginTransaction().apply {
-                            replace(R.id.flFragmentMain, HomeFragment())
-                            commit()
-                        }
+                        reset()
                     }, null)
             } else {
                 Log.e("ContributeFragment", "Error saving contribution to database: ${task.exception}")
                 Toast.makeText(requireContext(), "Error saving contribution to database", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun reset() {
+        fullName.hint = "Full Name"
+        fullName.text.clear()
+        email.hint = "Email"
+        email.text.clear()
+        faculty.hint = "Faculty"
+        faculty.text = ""
+        module.hint = "Module"
+        module.text.clear()
+        type.hint = "Type"
+        type.text = ""
+        comment.hint = "Comment"
+        comment.text.clear()
+        fileUri = null
+        progressBarCancelButtContainer.visibility = View.GONE
+        progressBar.progress = 0
+        contributeButt.visibility = View.VISIBLE
     }
 }

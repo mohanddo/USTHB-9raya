@@ -1,26 +1,20 @@
 package com.example.usthb9raya
 
-import android.content.Intent
-import android.graphics.Typeface
-import android.net.Uri
+
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.usthb9raya.Utils.Utils.openDriveLink
 import com.example.usthb9raya.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
+    private var selectedFragment = "home"
+    private var newSelectedFragment = "home"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,67 +37,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttHome.setOnClickListener {
             setCurrentFragment(homeFragment)
-
-            binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
-            binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house_click))
-
-            binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite))
-
-            binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download))
-
-            binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings))
-
+            changeColor()
         }
 
         binding.buttFavorites.setOnClickListener {
             setCurrentFragment(favoritesFragment)
-
-            binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house))
-
-            binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
-            binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite_click))
-
-            binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download))
-
-            binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings))
+            changeColor()
         }
 
         binding.buttContribute.setOnClickListener {
             setCurrentFragment(contributeFragment)
-
-            binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house))
-
-            binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite))
-
-            binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
-            binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download_click))
-
-            binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings))
+            changeColor()
         }
 
         binding.buttSettings.setOnClickListener {
             setCurrentFragment(settingsFragment)
-
-            binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house))
-
-            binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite))
-
-            binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.black))
-            binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download))
-
-            binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
-            binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings_click))
+            changeColor()
         }
 
 
@@ -114,5 +63,62 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.flFragmentMain, fragment)
             commit()
         }
+
+        selectedFragment = newSelectedFragment
+
+        newSelectedFragment = when (fragment) {
+            is HomeFragment -> "home"
+            is FavoritesFragment -> "favorites"
+            is ContributeFragment -> "contribute"
+            is SettingsFragment -> "settings"
+            else -> "Unknown"
+        }
+    }
+
+    private fun changeColor() {
+        when(newSelectedFragment) {
+            "home" -> {
+                binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house_click))
+            }
+
+            "favorites" -> {
+                binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite_click))
+            }
+
+            "contribute" -> {
+                binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download_click))
+            }
+
+            "settings" -> {
+                binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings_click))
+            }
+        }
+
+        when(selectedFragment) {
+            "home" -> {
+                binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.black))
+                binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house))
+            }
+
+            "favorites" -> {
+                binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.black))
+                binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite))
+            }
+
+            "contribute" -> {
+                binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.black))
+                binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download))
+            }
+
+            "settings" -> {
+                binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.black))
+                binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings))
+            }
+        }
+
     }
 }
