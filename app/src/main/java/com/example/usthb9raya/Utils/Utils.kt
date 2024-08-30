@@ -1,5 +1,6 @@
 package com.example.usthb9raya.Utils
 
+import android.content.ContentResolver
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -78,8 +79,9 @@ object Utils {
 
     }
 
-
-
-
+    fun getMimeType(context: Context, uri: Uri): String? {
+        val contentResolver: ContentResolver = context.contentResolver
+        return contentResolver.getType(uri)
+    }
 
 }
