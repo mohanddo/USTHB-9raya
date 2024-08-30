@@ -9,8 +9,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.usthb9raya.dataClass.Faculty
 import com.example.usthb9raya.R
+import com.example.usthb9raya.dataClass.Faculty
+
 
 class AdapterFaculty(
     private val faculties: List<Faculty>,
@@ -38,15 +39,23 @@ class AdapterFaculty(
                     faculty_arrow.setImageResource(R.drawable.ic_arrow_down) // Arrow pointing down
 
                     if (moduleAdapter == null) {
+                        // Initialize adapter with actual module data from the faculty
                         moduleAdapter = AdapterModule(emptyList(), context)
                         innerRecyclerView.layoutManager = LinearLayoutManager(context)
                         innerRecyclerView.adapter = moduleAdapter
                     }
+
+                    // Update the adapter with the latest modules
+                    moduleAdapter?.updateModules(faculties[adapterPosition].modules)
                 }
             }
         }
 
         fun bind(faculty: Faculty) {
+            // Bind faculty name
+            faculty_name.text = faculty.faculty_name
+
+            // Initialize or update moduleAdapter with the faculty's modules
             if (moduleAdapter == null) {
                 moduleAdapter = AdapterModule(faculty.modules, context)
                 innerRecyclerView.layoutManager = LinearLayoutManager(context)
@@ -54,7 +63,6 @@ class AdapterFaculty(
             } else {
                 moduleAdapter?.updateModules(faculty.modules)
             }
-            faculty_name.text = faculty.faculty_name
         }
     }
 

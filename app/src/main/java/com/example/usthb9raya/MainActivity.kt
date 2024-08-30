@@ -1,5 +1,6 @@
 package com.example.usthb9raya
 
+import FavoritesFragment
 import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri

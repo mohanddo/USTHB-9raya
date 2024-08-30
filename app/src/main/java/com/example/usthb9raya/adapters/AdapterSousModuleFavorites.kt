@@ -12,14 +12,13 @@ import com.example.usthb9raya.R
 import com.example.usthb9raya.Utils.Utils
 import com.example.usthb9raya.dataClass.SousModule
 
-class AdapterSousModule(
+class AdapterSousModuleFavorites(
     private var sousModule: List<SousModule>,
-    private val context: Context,
+    private val context: Context
+) : RecyclerView.Adapter<AdapterSousModuleFavorites.MyViewHolder>() {
 
-) : RecyclerView.Adapter<AdapterSousModule.MyViewHolder>() {
-
-    // Track expanded state
     private val expandedState = mutableMapOf<Int, Boolean>()
+
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sous_module_module_name: TextView = itemView.findViewById(R.id.text_view_sous_module)
@@ -41,7 +40,6 @@ class AdapterSousModule(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = sousModule[position]
         holder.sous_module_module_name.text = item.sous_module_name
-
         val isExpanded = expandedState[position] ?: false
         val visibility = if (isExpanded) View.VISIBLE else View.GONE
         val arrowResource = if (isExpanded) R.drawable.ic_arrow_down else R.drawable.ic_arrow_right
@@ -56,10 +54,10 @@ class AdapterSousModule(
 
         holder.sous_module.setOnClickListener {
 
-        val newExpandedState = !isExpanded
-        expandedState[position] = newExpandedState
-        notifyItemChanged(position) // Notify change only for this item
-    }
+            val newExpandedState = !isExpanded
+            expandedState[position] = newExpandedState
+            notifyItemChanged(position) // Notify change only for this item
+        }
 
         // open link
         holder.sous_module_course.setOnClickListener {
@@ -81,21 +79,16 @@ class AdapterSousModule(
             Utils.openDriveLink(context, item.sous_module_exams_link)
         }
 
-        holder.sous_module_others.setOnClickListener {
-            Utils.openDriveLink(context, item.sous_module_others_link )
-            Utils.openDriveLink(context, item.sous_module_others_link)
-        }
-
-
         var boll = false
-       holder.sous_module_heart.setOnClickListener {
 
+        holder.sous_module_heart.setOnClickListener {
             boll = !boll
             if(boll){
-                holder.sous_module_heart.setImageResource(R.drawable.ic_heart_click) // Change the heart icon
+                holder.sous_module_heart.setImageResource(R.drawable.ic_heart)
             }else{
-                holder.sous_module_heart.setImageResource(R.drawable.ic_heart) // Change the heart icon
+                holder.sous_module_heart.setImageResource(R.drawable.ic_heart_click)
             }
+
         }
     }
 
@@ -106,6 +99,5 @@ class AdapterSousModule(
         notifyDataSetChanged()
     }
 }
-
 
 
