@@ -79,22 +79,22 @@ class MainActivity : AppCompatActivity() {
     private fun changeColor() {
         when(newSelectedFragment) {
             "home" -> {
-                binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.textviewHouse.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 binding.imageviewHouse.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_house_click))
             }
 
             "favorites" -> {
-                binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.textviewFavorite.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 binding.imageviewFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_favorite_click))
             }
 
             "contribute" -> {
-                binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.textviewDaowload.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 binding.imageviewDownload.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_download_click))
             }
 
             "settings" -> {
-                binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.light_blue))
+                binding.textviewSettings.setTextColor(ContextCompat.getColor(this,R.color.blue))
                 binding.imageviewSettings.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_settings_click))
             }
         }

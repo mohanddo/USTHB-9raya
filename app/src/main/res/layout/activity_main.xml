@@ -54,7 +54,7 @@
                     android:id="@+id/textview_house"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/light_blue"
+                    android:textColor="@color/blue"
                     android:textSize="14sp"
                     android:text="Home"
                     android:textAlignment="center" />

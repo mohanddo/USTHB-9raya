@@ -9,6 +9,47 @@
     android:orientation="vertical"
     tools:context=".ContributeFragment">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="16dp"
+        android:background="@drawable/bck_top_16dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bck_top_design">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_school_book"
+                android:layout_weight="0.9"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="Contribute">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,7 +57,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp">
 
             <EditText
                 android:id="@+id/fullName"
@@ -135,6 +177,18 @@
                 android:background="@drawable/bck_contribute"
                 />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:text="Thank you for helping others by providing this study resource!">
+            </TextView>
+
             <LinearLayout
                 android:id="@+id/progressBar_CancelButt_Container"
                 android:layout_width="wrap_content"
@@ -163,5 +217,8 @@
         </LinearLayout>
 
     </ScrollView>
+
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

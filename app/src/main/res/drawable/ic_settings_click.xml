@@ -6,21 +6,21 @@
   <path
       android:pathData="m8,2c-1.293,0 -2.395,0.843 -2.813,2L3,4c-0.552,0 -1,0.448 -1,1 0,0.552 0.448,1 1,1h2.186c0.417,1.158 1.521,2 2.814,2 1.293,0 2.395,-0.843 2.813,-2L21,6c0.552,0 1,-0.448 1,-1 0,-0.552 -0.448,-1 -1,-1L10.813,4c-0.417,-1.157 -1.519,-2 -2.813,-2zM8,4c0.564,0 1,0.436 1,1 0,0.564 -0.436,1 -1,1 -0.564,0 -1,-0.436 -1,-1 0,-0.564 0.436,-1 1,-1z"
       android:strokeLineJoin="round"
-      android:fillColor="@color/light_blue"
+      android:fillColor="@color/blue"
       android:strokeColor="#00000000"
       android:fillType="nonZero"
       android:strokeLineCap="round"/>
   <path
       android:pathData="m15,9c-1.293,0 -2.395,0.843 -2.813,2L3,11c-0.552,0 -1,0.448 -1,1 0,0.552 0.448,1 1,1h9.186c0.417,1.158 1.521,2 2.814,2 1.293,0 2.395,-0.843 2.813,-2L21,13c0.552,0 1,-0.448 1,-1 0,-0.552 -0.448,-1 -1,-1h-3.188c-0.417,-1.157 -1.519,-2 -2.813,-2zM15,11c0.564,0 1,0.436 1,1 0,0.564 -0.436,1 -1,1 -0.564,0 -1,-0.436 -1,-1 0,-0.564 0.436,-1 1,-1z"
       android:strokeLineJoin="round"
-      android:fillColor="@color/light_blue"
+      android:fillColor="@color/blue"
       android:strokeColor="#00000000"
       android:fillType="nonZero"
       android:strokeLineCap="round"/>
   <path
       android:pathData="m8,16c-1.293,0 -2.395,0.843 -2.813,2L3,18c-0.552,0 -1,0.448 -1,1 0,0.552 0.448,1 1,1h2.188c0.417,1.157 1.519,2 2.813,2 1.294,0 2.398,-0.842 2.814,-2L21,20c0.552,0 1,-0.448 1,-1 0,-0.552 -0.448,-1 -1,-1L10.813,18c-0.417,-1.157 -1.519,-2 -2.813,-2zM8,18c0.564,0 1,0.436 1,1 0,0.564 -0.436,1 -1,1 -0.564,0 -1,-0.436 -1,-1 0,-0.564 0.436,-1 1,-1z"
       android:strokeLineJoin="round"
-      android:fillColor="@color/light_blue"
+      android:fillColor="@color/blue"
       android:strokeColor="#00000000"
       android:fillType="nonZero"
       android:strokeLineCap="round"/>
