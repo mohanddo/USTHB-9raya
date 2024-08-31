@@ -3,17 +3,13 @@ package com.example.usthb9raya
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.usthb9raya.adapters.AdapterFaculty
+import com.example.usthb9raya.adapters.UnifiedAdapter
 import com.example.usthb9raya.dataClass.Faculty
 import com.example.usthb9raya.dataClass.Module
 import com.example.usthb9raya.dataClass.SousModule
 import com.example.usthb9raya.databinding.FragmentHomeBinding
-import com.squareup.picasso.Picasso
 import org.json.JSONArray
 import java.io.InputStream
 
@@ -25,14 +21,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
 
-
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
 
         val jsonArray = readJsonFromRaw(requireContext(), R.raw.faculties_modules)
         val faculties = parseJson(jsonArray)
 
-        binding.recyclerView.adapter = AdapterFaculty(faculties, requireContext())
+        binding.recyclerView.adapter = UnifiedAdapter(faculties, requireContext())
     }
 
     override fun onDestroyView() {
@@ -40,26 +34,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = null
     }
 
-
     private fun readJsonFromRaw(context: Context, resourceId: Int): JSONArray {
         val inputStream: InputStream = context.resources.openRawResource(resourceId)
         val json = inputStream.bufferedReader().use { it.readText() }
         return JSONArray(json)
     }
 
-
     private fun parseJson(jsonArray: JSONArray): List<Faculty> {
         val facultyList = mutableListOf<Faculty>()
 
         for (i in 0 until jsonArray.length()) {
             val jsonObject = jsonArray.getJSONObject(i)
-            val faculty = jsonObject.getString("faculty")
+            val facultyName = jsonObject.getString("faculty")
             val modulesArray = jsonObject.getJSONArray("modules")
             val moduleList = mutableListOf<Module>()
 
             for (j in 0 until modulesArray.length()) {
                 val moduleObject = modulesArray.getJSONObject(j)
-                val module = moduleObject.getString("module")
+                val moduleName = moduleObject.getString("module")
                 val courseLink = moduleObject.getString("course")
                 val tpLink = moduleObject.getString("tp")
                 val tdLink = moduleObject.getString("td")
@@ -70,20 +62,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
                 for (k in 0 until sousModulesArray.length()) {
                     val sousModuleObject = sousModulesArray.getJSONObject(k)
-                    val sousModule = sousModuleObject.getString("sousModuleName")
+                    val sousModuleName = sousModuleObject.getString("sousModuleName")
                     val sousModuleCourseLink = sousModuleObject.getString("sousModuleCourse")
                     val sousModuleTpLink = sousModuleObject.getString("sousModuleTp")
                     val sousModuleTdLink = sousModuleObject.getString("sousModuleTd")
                     val sousModuleExamsLink = sousModuleObject.getString("sousModuleExams")
                     val sousModuleOthersLink = sousModuleObject.getString("sousModuleOthers")
-                    sousModuleList.add(SousModule(sousModule, sousModuleCourseLink, sousModuleTpLink, sousModuleTdLink,
+                    sousModuleList.add(SousModule(sousModuleName, sousModuleCourseLink, sousModuleTpLink, sousModuleTdLink,
                         sousModuleExamsLink, sousModuleOthersLink))
                 }
-                moduleList.add(Module(module, courseLink, tpLink, tdLink, examsLink, othersLink, sousModuleList))
+                moduleList.add(Module(moduleName, courseLink, tpLink, tdLink, examsLink, othersLink, sousModuleList))
             }
-            facultyList.add(Faculty(faculty, moduleList))
+            facultyList.add(Faculty(facultyName, moduleList))
         }
         return facultyList
     }
-
 }
+
+
+

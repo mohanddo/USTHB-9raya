@@ -1,22 +1,14 @@
 package com.example.usthb9raya
 
-import FavoritesFragment
-import android.content.Intent
-import android.graphics.Typeface
-import android.net.Uri
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.usthb9raya.Utils.Utils.openDriveLink
 import com.example.usthb9raya.databinding.ActivityMainBinding
+import com.example.usthb9raya.fragments.FavoritesFragment
 
 
 class MainActivity : AppCompatActivity() {
