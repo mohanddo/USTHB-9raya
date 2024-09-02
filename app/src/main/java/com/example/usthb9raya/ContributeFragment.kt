@@ -224,10 +224,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     }
 
     private fun reset() {
-        fullName.hint = "Full Name"
-        fullName.text.clear()
-        email.hint = "Email"
-        email.text.clear()
         faculty.hint = "Faculty"
         faculty.text = ""
         module.hint = "Module"

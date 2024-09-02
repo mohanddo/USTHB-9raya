@@ -12,5 +12,5 @@ data class Contribution(val fullName: String,
                         val contributionId: String,
     val mimeType: String    ,
                         val timestamp: Long = System.currentTimeMillis(),
-                        val isFileDownloaded: String = "false",
+                        val fileDownloaded: String = "false"
 )
