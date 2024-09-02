@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Toast
 import com.example.usthb9raya.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
@@ -55,12 +56,17 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
         }
 
+
         if (emailIntent.resolveActivity(requireActivity().packageManager) != null) {
             startActivity(emailIntent)
+        } else {
+
+            Toast.makeText(requireActivity(), "No email app found", Toast.LENGTH_SHORT).show()
         }
     }
 
-   private fun openRank(){
+
+    private fun openRank(){
             val intent = Intent(requireActivity(), ContributeRank::class.java)
             startActivity(intent)
     }
