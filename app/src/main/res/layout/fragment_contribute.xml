@@ -9,17 +9,13 @@
     android:orientation="vertical"
     tools:context=".ContributeFragment">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="16dp"
-        android:background="@drawable/bck_top_16dp"
-        app:cardBackgroundColor="@color/white">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
+            android:elevation="16dp"
             android:background="@drawable/bck_top_design">
 
             <ImageView
@@ -47,7 +43,6 @@
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
 
 
     <ScrollView

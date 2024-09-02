@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+        <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            <!-- Splash screen theme -->
+            <item name="android:windowSplashScreenBackground">@color/light_blue</item>
+            <item name="android:windowSplashScreenAnimatedIcon">@drawable/usthb_9raya</item>
+
+        </style>
+
+
+
+
 </resources>
