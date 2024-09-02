@@ -10,6 +10,7 @@ data class Contribution(val fullName: String,
                         val comment: String?,
                         val fileUrl: String,
                         val contributionId: String,
-    val mimeType: String,
-                        val timestamp: Long = System.currentTimeMillis()
+    val mimeType: String    ,
+                        val timestamp: Long = System.currentTimeMillis(),
+                        val isFileDownloaded: String = "false",
 )
