@@ -1,6 +1,6 @@
 [
   {
-    "faculty": "Faculté D'informatique",
+    "faculty": "Faculté d'informatique",
     "modules": [
       {
         "module": "Algorithmes et Structures de données",
@@ -195,8 +195,9 @@
       }
     ]
   },
+
   {
-    "faculty": "Faculté De Chimie",
+    "faculty": "Faculté de Chimie",
     "modules": [
       {
         "module": "Chimie",
@@ -236,10 +237,8 @@
     ]
   },
 
-
-
   {
-    "faculty": "Faculté De Génie Civil",
+    "faculty": "Faculté de Génie Civil",
     "modules": [
       {
         "module": "Hydrologie",
@@ -321,9 +320,276 @@
         "sousModules": []
       }
     ]
-  }
+  },
 
-  ]
+  {
+    "faculty": "Faculté de Génie Electrique",
+    "modules": [
+      {
+        "module": "Antennes et Lignes de Transmission",
+        "course": "https://drive.google.com/drive/folders/1pfn2PlN9B6i09PnLg17mCDsdVmBitUWF?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1k2dUj6Z1505e7w0nqzNh8B58SouRgFs5?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1joK1ZNz1267pGpdQRXfxfZtdUYMR6iSv?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Ub0QRzvXz4HlI7NNuVwdUA6LD806mZsp?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1LzszLiLJfRy91WU3ik3TCQ1LOoBikEct?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Calculatrices et Interfaçage",
+        "course": "https://drive.google.com/drive/folders/1CoHhqiEcFRrm96IhoR_JJuJETvGBGSe1?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/118z4zmhWcil6hC-D9zOJ6-srZiJ6kjcy?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1ha7G-fw2g6hm_7W3kiAHpGDlyqi8vicW?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1EWdVJGB9N6rQBEDhL2RFED7u2ZdQqpsK?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1uGtn1TTCu3LHknC_jYQjIJ9V0FHUjy-K?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Capteurs et Mesures en Télécommunications",
+        "course": "https://drive.google.com/drive/folders/1oj83R-z-BKQgRzP3nCBpFL-EqqHNbXEL?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1l9FfDxjbivAKq90xar6lhImfal3oSmXZ?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1HY8-fMGsQ8ywWOFqNBertgKLeA1EJAs1?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1yG3PIqJU8PeWX0PWmZvPkcaqcRFLJqPD?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1scTYc8mH-S5wNP73s-6gzJ8xTiYmB5AJ?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Codage et Théorie de l’Information",
+        "course": "https://drive.google.com/drive/folders/1GrdVUO905R6kRuQ_rU7c_FwaS7QzYiN0?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1Or2x8UZrnxC40bP6oQ_7BgfIKiVWbK9K?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1ABPAMtvQQuvklNPJycBhcyaVXAbfHyhj?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1S_0NuUnTP2rF863KB6oUz6HPUIz20WA8?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1pZlqE4TFseE4MUf6T0-n9KGzmHzehMIZ?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Communication Analogique",
+        "course": "https://drive.google.com/drive/folders/1ithWWjLcbeN8keKovJasPCtIAax50YID?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1NTViFfvvSoJGkuVlVRgUgVb3zgEjIxbf?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1uHpmynnpKh5N3xyoB_4P-7_vwdHjVsjH?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1xLzxg3cTtvamcbrR2cv89xhP8kwf6J9t?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/18wSG3Yp_eY2zTBwi1PSWZO9OvRlqvKEc?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Communications Numériques",
+        "course": "https://drive.google.com/drive/folders/10S1eEXAiqbCJIM0wQ4hK49C0XDryPIJL?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/18Om99FzeQA5d5YImRjh9GUVmaRuapDH_?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1mmnGR8qYg1gxkVSfc96dOx9KplA0e0wq?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1tHbXLkJ8EL1DuPwo1vHztrEEPawlqKIX?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/17E3OvQk-d9wQeP2vNFdsZivpJBbwwed8?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Découvertes",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Droit des Télécommunications",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1aFhKx8ELjRykH3LlI43WwJgJYS3xPOSZ?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1pEpfi91SO72XNevYCZMG6SQUAG6Rk4Yf?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1vYPIepWlHTG_zV6pZuL9lYqYjBrUpiRR?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1PjaEvtEqsx9yLSbO1SbNrzg3Ol7HE4z_?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1iiyfnqiniAUudMVVl5c0SElWjqAhg2TW?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Énergie et Environnement",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1XC3kfhsb3pMjQv1P9itP3UQXlJWJQ1_s?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1_P-2HnuCJwkwbu5PG8FxZ5MHAz9sGcE4?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1iybKNP0wRjyrZioPgYuRjou4o-dmVPp9?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1v30ZDHF8SIQaeqaao6vE4m4ebCECK3NK?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1GglhDBRga4a9luDRZMAS-wKXdPklxTeB?usp=drive_link"
+          },
+          {
+            "sousModuleName": "État de l’Art du Génie Électrique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1fuy-adLdZ_qww9HpcCGFOie5GdqwT9PM?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1NkA5XUIIQjPtZDRLTldajq2fXeAQvKbT?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1cPcIn_TabL6MmXg9GZQTHz7S8vSzF71O?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1MZv2HfmhH1j_Syoasgt-R4KFQA-2CnDr?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/156rP7OeNYLJMZehpskGEzPs4_ZQEOxjE?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Optoélectronique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1yg7Wut7-7uhF-T3zQfpXOZ-YH4IFLrem?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1MrCmbHkfMne3mlzfKxKRmyPJZc7QUmPs?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1E4JHgdOW0wE3ra7I2S-y2GWXBN6W6jx4?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/10OG_3XPAHl8jUtaCGUqvunoTkAGJ86X1?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1BeJ79K0A3OqL62HARZuvAKakitKBb7s6?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Sécurité de l’Information",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1bjaLOKVG1tPeYRjPiNju5I3y9fjaTgbF?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1TlgnAD0d1zvCoBfd2JNz6DYCmPvAX9Vx?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1N1P-_N1GsFcV-tC7rxe1Y3fMss2VeHZ7?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1NdOlh7MYCUPuwgUlJeEYyVpDihhk_Cdq?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1NrQLlGUXeNPBjXhkx_jZiMfzniXx61nW?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Supports de Transmission",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/17zDkjAYKmRAbq8-j96obs2oWTREJuvvk?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1bz4Q-a97T9QLdcnzzuGwNxoZyKZXCUAd?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1K0lBOypoZOqAwGM6DIff6ShJcwqdwQOJ?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/12q7XK528_jJ8UgapAZRa0BjtMPOOnH-f?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1a7O3TOsgLEcos9m5ahecnWSjta2gNCHT?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Télécommunications et Applications",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1sgkrDduiyiiAoefNtUrmNxBItRBaNsu8?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1-7iEIQO1BBiMH-Hq05aNvBNx8d1mKH66?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1hY8GBhimBuN85oeObjPm1t6MzN4SPFJi?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1OjH5h9t_tLXBpj0pPNKy7FQvtnrIGBD1?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1cOexj37aPTBDUWZfNnFDIyH6kN0UINHj?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Téléphonie",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1yYekaskSB5yhsvFiE4GHufR9Pu3AY9gg?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1XePur3iQ1-LleJCDGl6ss53EG44Z-2Jx?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1Nz854J4kozXnI_LU87oFuRaAyPQQkt_E?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1BLRxRQUn-j5DAZhHISn8ne-O_PT6jqAb?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1kVmtlOyQmMM1nmc8Ne_kVzI1DjVoMg8c?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Électricité",
+        "course": "https://drive.google.com/drive/folders/1LTfkQbs--xT7Faa_0meSOY31BXYT_tFE?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1NBdQtYQXsYVvbAsFDteTZKSpXTPkIX4I?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/13Xl31AFW6sd9TKumGCEE2O2mG164TrR4?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Nk0hkgmvf3uVGiAUVBDULujItOWaR-vg?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1YUOMtzQxy4TlilMK7OI8oxPShRGzRXMk?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Électromagnétisme",
+        "course": "https://drive.google.com/drive/folders/1HKb5DQxet-7MD4MI11nrL1HqXD8SVvOJ?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1taTdIDunhHxmo9VUmANRpAUR6ZxvgLIH?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1yKtDKVGoIFa-sj0vw0ZyfM9r_vhhiVIy?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1_YtOebsr_-w3BeFmbh_BCxlTGtIHNWGe?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1AWkIDMOJzlRK4aAc7dSBwqXsRnEZuV5C?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Électronique",
+        "course": "https://drive.google.com/drive/folders/1nGayHElC4VvcMI2flAXFBFBlvObftUjo?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1YPCOb3uWSsK-hkDKnuxEZTXEPhEn34Yu?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/14wEpxXFGK6eORZ2etjUb9m4IK-egI9q_?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1qNjcoLqBeRw31wd7h0x1s1bL3fDlc-eB?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1ta5yP9gl4TqiucTbPhJmIUAYmSAMMAPT?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Électrotechnique",
+        "course": "https://drive.google.com/drive/folders/1rP73Hj_cp28JeEC9cklzsQBI8HuJD7SO?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1_AKNIroNBK2XwtL4ULZ0K-Txh7FS5OgW?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1GJ4s73-hR30hVnZ1rD6Xgqe25pcS6xtf?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Wr5FhF9XrXnjreEF0ag7CzbcrkeMInpW?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/16i5Ot1DETAl8_sCPVYb8iCPh5aFJvhwO?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Logique Combinatoire et Séquentielle",
+        "course": "https://drive.google.com/drive/folders/1RxgoB6u8BHomISIpI2lZxIoRKIuPaM5t?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/16h4RV5hZW5NoTLPMUuSR6ujZwsnOuyQC?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1FBx0gQFSw7fKz3pICDINQnl5YH1fQf87?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1jYR-aMEJrP-dW3ottOsrsfjhsudYDlo6?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1KkbDbqB9x1KaNu7FF-dFYKFbV4tPYTQu?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mesures Électriques et Électroniques",
+        "course": "https://drive.google.com/drive/folders/11rQR06M78nUe1strxoiM01KgOqd2EX4j?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1Uy7Yz278dszY2sGvUCB1hNZV_3omuWbW?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1HofMLYB443dzusEGlVMiiC387l58aFVY?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1dlSsIKw_NIpl7vNylQuLuGaC2Cjmv4vq?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1I1VcpsjdbF0ozH60k1HG561SUH1dvDUN?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Ondes et Propagation",
+        "course": "https://drive.google.com/drive/folders/14bLKkyb2_g8mDYJZc10FP_oofFsgeumr?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1omns0hUYwr8djd-WVEAtBk42NOm3w-jh?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1WUILCf3tBYgXL-6KFvsWZwHZbplC_lZI?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1RjgqDzvX0XYtiTzakL2zAoaWW5e8mHMF?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1HW7kTATP2qv3bAIVjVRk1YTCs-2lkVbo?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Réseaux Informatiques Locaux",
+        "course": "https://drive.google.com/drive/folders/1-VBxZRAHFVVKfHIrf_VNuZmynGi2r0_D?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1qIEmF1YAPv6wvS6BDyuZs4ziVzpRBWVK?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1y0xaPno6M6asmAtm0fM9QeAi751SWJyD?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1fWFFfHyPObvE-mHzvDSDlkmPo_SzyVhI?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1sGhkXUof5rTFovijyqNWkXPVXsq3k6_x?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Systèmes et Réseaux de Télécommunications",
+        "course": "https://drive.google.com/drive/folders/1LgVHy6ULbqimo1jSdgZjHzl_q12VYqzL?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1m6B_V0nNIKukOxSH_DqNwryMPBjDSLG_?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/14pUjV8D4YQ2gzE7I0vGk-_jSj8NCr4K0?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1b6DO6XONm-Gbsu0eFWEQii8PQ6EGLosX?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1n3yvaPtwlsE_X7PznDHbRuoMh3KYW7CQ?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Télécommunications",
+        "course": "https://drive.google.com/drive/folders/17T5L8kbFU5qfmnfS6_ZPTWoSNKw7MKIM?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1JXfGvOvEuqntWvXT4WZRHMR7M9LfBfC1?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/18u-4fWuwtdqFgf_BoMT2clrdARq4WbIv?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1TsB7y9ztgVJXFYGKNt6ZNlJ0_LDLxpM4?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1ZHvkPek8fxTd8q2DZzLmmaAuUL0mJHpK?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Théorie du Signal",
+        "course": "https://drive.google.com/drive/folders/1kNN84Bw9C53gqQuTqSvJLnpD7i4tUY6h?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1jPLDrr0P9MlU6Ce0yAfHJKKCbxza66bk?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1-RjX9r-fYpUb3bMwl-H3h9Gy-LZA4wvK?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1yHZPw65DyyPsgTgQN7KFZkZNtDHwqv73?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1smcZbaHuf7ndS3X-sjK5-K_LNmUerjfH?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Traitement du Signal",
+        "course": "https://drive.google.com/drive/folders/1LjTjBKvZw1WKQqHSvsg7JArl0nB790mE?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1zEdnrdxLqulxj9GhoVbG8juOBqnMvKCZ?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1t3avY0W8-ocGCMk2RVO8Mza1AFOTVfs2?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1n7SlRbNs5z8MZTXLM21VK5w7h0owS84I?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1nmDekB3BXhePID7I7FF2mbFsiFs8T9KB?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Vibrations, Ondes et Oscillations",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Oscillations",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/15lC27RBupFNIF9XRJfcXq75fKp5tD36a?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1IC6T_mh70-I-1XG8JNjJU480dC1OnwDl?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1GDpTOKEg4bnOq9srbiQjJnAXf3C2rxsl?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/159-eo2izxpi_ueH-CEjr7K5Q5g9alWmV?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1oBMcaywHzBWZVrSSybbMcnOfW8qdpNOC?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Vibrations et Ondes",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1tpZ0AS3WoGze2NI5v5_YOVdhpK7a8_3b?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1J_AF14HX4iXjwEDrq65PiAuvniDwTiBp?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1Yably0FhTNQQMpoUbW79aj5L1l1nRGjI?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1XsNLGjDAOjFmvsZDaGLsUCK20NB2irfW?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1h0iRlUY1XaUH3KmwKb-Ykor6UU-hxjXY?usp=drive_link"
+          }
+        ]
+      }
+    ]
+  }
+]
 
 
 
