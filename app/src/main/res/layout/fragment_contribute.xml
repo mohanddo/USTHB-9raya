@@ -126,6 +126,8 @@
                 android:padding="8dp"
                 android:textColor="@color/black"/>
 
+
+
             <EditText
                 android:id="@+id/comment"
                 android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.example.usthb9raya.fragments
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.EditText
@@ -92,8 +93,9 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
 
         val facultyList = resources.getStringArray(R.array.faculties)
         faculty.setOnClickListener {
-            alertDialog(facultyList, "Faculty", faculty)
+            alertDialog(facultyList, "Faculté", faculty)
         }
+
 
         val typeList = resources.getStringArray(R.array.type)
         type.setOnClickListener {
@@ -103,18 +105,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         cancelButt = binding.buttCancel
         cancelButt.setOnClickListener {
             uploadTask?.pause()
-            Utils.alertDialog(requireContext(), "Cancel", "Are you sure you want to cancel?", "Yes", "No",
-                {
-                    uploadTask?.cancel()
-                    progressBarCancelButtContainer.visibility = View.GONE
-                    progressBar.progress = 0
-                    contributeButt.visibility = View.VISIBLE
-                },
-                {
-                    it.dismiss()
-                    uploadTask?.resume()
-                })
-
         }
     }
 
@@ -187,6 +177,21 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                     contributeButt.visibility = View.VISIBLE
                     progressBarCancelButtContainer.visibility = View.GONE
                     progressBar.progress = 0
+            }?.addOnPausedListener {
+                    Utils.alertDialog(requireContext(), "Cancel", "Are you sure you want to cancel?", "Yes", "No",
+                        {
+                            uploadTask?.cancel()
+                        },
+                        {
+                            it.dismiss()
+                            uploadTask?.resume()
+                        })
+
+                    Log.e("UploadTask", uploadTask?.isPaused.toString())
+            }?.addOnCanceledListener {
+                    progressBarCancelButtContainer.visibility = View.GONE
+                    progressBar.progress = 0
+                    contributeButt.visibility = View.VISIBLE
             }
 
         } catch (e: Exception) {

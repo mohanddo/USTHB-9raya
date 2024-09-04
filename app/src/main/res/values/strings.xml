@@ -19,15 +19,15 @@
     <string name="propos_de_usthb_9raya">À Propos de USTHB 9raya</string>
 
     <string-array name="faculties">
-        <item value="Faculté D'informatique">Faculté Informatique </item>
-        <item value="Faculté De Chimie">Faculté De Chimie</item>"
-        <item value="Faculté De Chimie">Faculté De Physique</item>"
-        <item value="Faculté De Chimie">Faculté Des Mathématiques</item>"
-        <item value="Faculté De Chimie">Faculté De Génie Mécanique Et Génie Des Procédés</item>"
-        <item value="Faculté De Chimie">Faculté De Génie Électrique</item>"
-        <item value="Faculté De Chimie">Faculté Des Sciences Biologiques</item>"
-        <item value="Faculté De Chimie">Faculté De Génie Civil</item>"
-        <item value="Faculté De Chimie">Faculté De La Science De La Terre</item>"
+        <item value="Faculté D'informatique">Informatique </item>
+        <item value="Faculté De Chimie">Chimie</item>"
+        <item value="Faculté De Chimie">Physique</item>"
+        <item value="Faculté De Chimie">Mathématiques</item>"
+        <item value="Faculté De Chimie">Génie Mécanique Et Génie Des Procédés</item>"
+        <item value="Faculté De Chimie">Génie Électrique</item>"
+        <item value="Faculté De Chimie">Sciences Biologiques</item>"
+        <item value="Faculté De Chimie">Génie Civil</item>"
+        <item value="Faculté De Chimie">Science De La Terre</item>"
     </string-array>
 
     <string-array name="type">
