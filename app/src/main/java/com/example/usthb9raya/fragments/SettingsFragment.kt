@@ -1,10 +1,13 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.fragments
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import com.example.usthb9raya.AboutUsthb
+import com.example.usthb9raya.ContributeRank
+import com.example.usthb9raya.R
 import com.example.usthb9raya.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {

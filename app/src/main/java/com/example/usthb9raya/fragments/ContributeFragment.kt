@@ -1,4 +1,4 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.fragments
 
 import android.net.Uri
 import android.os.Bundle
@@ -7,15 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.app.ActivityCompat.recreate
+import com.example.usthb9raya.R
 import com.example.usthb9raya.Utils.FirebaseUtil.contributionsRef
 import com.example.usthb9raya.Utils.FirebaseUtil.storageRef
 import com.example.usthb9raya.Utils.Utils
@@ -44,19 +44,21 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var cancelButt: ImageButton
     private var uploadTask: UploadTask? = null
     private var mimeType: String? = null
-
-    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        uri?.let {
-            fileUri = uri
-            mimeType = getMimeType(requireContext(), uri)
-        }
-
-    }
+    private lateinit var getContent: ActivityResultLauncher<String>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentContributeBinding.bind(view)
 
+        getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            uri?.let {
+                fileUri = uri
+                mimeType = getMimeType(requireContext(), uri)
+            }
+
+        }
+
+        Log.e("FileUri", fileUri.toString())
         progressBar = binding.progressBar
         fullName = binding.fullName
         email = binding.email
@@ -146,7 +148,7 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             val maxFileSize = 200 * 1024 * 1024
 
             if (fileSize > maxFileSize) {
-                Toast.makeText(requireContext(), "File is too large (more than 200MB)", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "File is too large (more than 200MB)", Toast.LENGTH_LONG).show()
                 return
             }
 
