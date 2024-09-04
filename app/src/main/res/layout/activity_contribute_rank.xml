@@ -13,10 +13,14 @@
         android:layout_height="wrap_content"
         android:textColor="#5D5959"
         android:textSize="22sp"
-        android:text="You have not contributed yet Shame on you "
+        android:layout_marginHorizontal="16dp"
+        android:text="Nous sommes ravis de vous annoncer que la fonctionnalité de classement sera bientôt disponible dans la prochaine mise à jour de notre application"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textStyle="normal">
+        android:textStyle="normal"
+        android:lineSpacingExtra="4dp"
+        android:lineSpacingMultiplier="1.2">
     </TextView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

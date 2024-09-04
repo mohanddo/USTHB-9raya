@@ -175,6 +175,35 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bck_contribute"
                 />
+            <LinearLayout
+                android:id="@+id/progressBar_CancelButt_Container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:layout_weight="0.09"
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:max="100"
+                    style="?android:attr/progressBarStyleHorizontal"/>
+
+                <ImageButton
+                    android:layout_weight="1"
+                    android:id="@+id/butt_Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cancel"
+                    android:background="@null"
+                    />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -188,30 +217,7 @@
                 android:text="Merci d’aider les autres en fournissant cette ressource d’étude!">
             </TextView>
 
-            <LinearLayout
-                android:id="@+id/progressBar_CancelButt_Container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:max="100"
-                    style="?android:attr/progressBarStyleHorizontal"/>
-
-                <ImageButton
-                    android:id="@+id/butt_Cancel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_cancel"
-                    android:background="@null"
-                    />
-
-            </LinearLayout>
 
         </LinearLayout>
 
