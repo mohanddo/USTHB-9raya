@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ContributeFragment">
+    tools:context=".fragments.ContributeFragment">
 
 
 
@@ -93,7 +93,8 @@
                 android:hint="@string/faculty"
                 android:minHeight="48dp"
                 android:background="@drawable/bck_user_input"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/module"
@@ -122,7 +123,8 @@
                 android:drawablePadding="8dp"
                 android:minHeight="48dp"
                 android:background="@drawable/bck_user_input"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/comment"

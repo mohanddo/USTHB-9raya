@@ -1,10 +1,11 @@
-package com.example.usthb9raya
+package com.example.usthb9raya.fragments
 
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.usthb9raya.R
 import com.example.usthb9raya.adapters.UnifiedAdapter
 import com.example.usthb9raya.dataClass.Faculty
 import com.example.usthb9raya.dataClass.Module
