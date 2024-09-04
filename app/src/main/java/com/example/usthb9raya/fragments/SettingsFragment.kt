@@ -1,7 +1,6 @@
 package com.example.usthb9raya.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -51,19 +50,15 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     }
 
     private fun sendEmail() {
-        val recipient = "akli88mohand@gmail.com"
-
-        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:")
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
+        val emailIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "vnd.android.cursor.dir/email"
+            putExtra(Intent.EXTRA_EMAIL, arrayOf("akli88mohand@gmail.com"))
         }
-
-        if (emailIntent.resolveActivity(requireActivity().packageManager) != null) {
-            startActivity(emailIntent)
-        }
+        startActivity(Intent.createChooser(emailIntent, "Send email..."))
     }
 
-   private fun openRank(){
+
+    private fun openRank(){
             val intent = Intent(requireActivity(), ContributeRank::class.java)
             startActivity(intent)
     }

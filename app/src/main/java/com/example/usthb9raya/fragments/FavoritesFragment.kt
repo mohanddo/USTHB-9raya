@@ -19,34 +19,41 @@ import java.lang.reflect.Type
 class FavoritesFragment : Fragment() {
 
     private lateinit var favoritesRecyclerView: RecyclerView
+    private lateinit var emptyView: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.fragment_favorites, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         favoritesRecyclerView = view.findViewById(R.id.recyclerViewModulesFavorites)
+        emptyView = view.findViewById(R.id.empty_view)
         favoritesRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-
 
         val favoriteModules = loadFavoriteModules()
         val favoriteSousModules = loadFavoriteSousModules()
 
+        if (favoriteModules.isEmpty() && favoriteSousModules.isEmpty()) {
 
-        val combinedFavorites = mutableListOf<Any>()
-        combinedFavorites.addAll(favoriteModules)
-        combinedFavorites.addAll(favoriteSousModules)
+            emptyView.visibility = View.VISIBLE
+            favoritesRecyclerView.visibility = View.GONE
+        } else {
 
+            emptyView.visibility = View.GONE
+            favoritesRecyclerView.visibility = View.VISIBLE
 
-        val adapter = UnifiedAdapter(combinedFavorites, requireContext())
-        favoritesRecyclerView.adapter = adapter
+            val combinedFavorites = mutableListOf<Any>()
+            combinedFavorites.addAll(favoriteModules)
+            combinedFavorites.addAll(favoriteSousModules)
+
+            val adapter = UnifiedAdapter(combinedFavorites, requireContext())
+            favoritesRecyclerView.adapter = adapter
+        }
     }
 
     private fun loadFavoriteModules(): List<Module> {
@@ -79,6 +86,7 @@ class FavoritesFragment : Fragment() {
         }
     }
 }
+
 
 
 

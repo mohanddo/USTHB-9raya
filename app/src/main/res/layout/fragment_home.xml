@@ -36,7 +36,7 @@
                     android:textStyle="bold"
                     android:padding="8dp"
                     android:textColor="@color/white"
-                    android:text="Home ">
+                    android:text="Accueil">
 
                 </TextView>
 

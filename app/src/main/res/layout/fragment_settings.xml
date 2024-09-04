@@ -36,7 +36,7 @@
             android:textStyle="bold"
             android:padding="8dp"
             android:textColor="@color/white"
-            android:text="Settings">
+            android:text="Paramètres">
 
         </TextView>
 
@@ -74,7 +74,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="Sahre"
+                android:text="Partager"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -104,7 +104,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="Contact the developers"
+                android:text="Contacter les Développeurs"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -134,7 +134,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="About USTHB_9raya"
+                android:text="À Propos de USTHB_9raya"
                 android:textStyle="normal" />
 
         </LinearLayout>
@@ -164,7 +164,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="Contribute Rank"
+                android:text="Classement dans Contribuer"
                 android:textStyle="normal" />
 
         </LinearLayout>

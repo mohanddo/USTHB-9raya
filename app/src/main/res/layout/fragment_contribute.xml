@@ -37,7 +37,7 @@
                 android:textStyle="bold"
                 android:padding="8dp"
                 android:textColor="@color/white"
-                android:text="Contribute">
+                android:text="Contribuer">
 
             </TextView>
 
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="44dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Add file"
+                android:text="Ajouter un Fichier"
                 android:textColor="@color/black"
                 android:textStyle="normal"
                 android:textSize="16sp"
@@ -183,7 +183,7 @@
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="12sp"
-                android:text="Thank you for helping others by providing this study resource!">
+                android:text="Merci d’aider les autres en fournissant cette ressource d’étude!">
             </TextView>
 
             <LinearLayout
