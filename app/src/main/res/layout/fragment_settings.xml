@@ -134,7 +134,7 @@
                 android:textSize="16sp"
                 android:paddingStart="8dp"
                 android:gravity="center_vertical"
-                android:text="À Propos de USTHB_9raya"
+                android:text="@string/propos_de_usthb_9raya"
                 android:textStyle="normal" />
 
         </LinearLayout>
