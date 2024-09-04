@@ -6,18 +6,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".AboutUsthb">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="About USTHB"
-        android:textColor="#5D5959"
-        android:textSize="22sp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textStyle="normal">
 
-    </TextView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="À propos de USTHB9raya"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:paddingBottom="16dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenue sur USTHB9raya—votre compagnon d'étude complet, spécialement conçu pour les étudiants de l'Université des Sciences et de la Technologie Houari Boumediene (USTHB). Notre application offre une vaste collection de ressources pédagogiques couvrant tous les modules et sous-modules à travers diverses disciplines. Que vous recherchiez des cours, TD, TP, examens ou autres matériaux d'étude, USTHB9raya est là pour vous."
+                android:paddingBottom="16dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caractéristiques principales :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Ressources complètes : Accédez à une bibliothèque riche en contenu éducatif, y compris des cours, des travaux dirigés (TD), des travaux pratiques (TP), des examens et bien plus encore."
+                android:paddingBottom="8dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Contenu alimenté par les utilisateurs : La force d'USTHB9raya réside dans sa communauté d'utilisateurs. Nos ressources s'enrichissent constamment grâce aux contributions précieuses des utilisateurs comme vous. Vous pouvez facilement télécharger vos supports d'étude pour aider vos camarades à réussir."
+                android:paddingBottom="8dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Navigation facile : Trouvez rapidement ce dont vous avez besoin grâce à notre interface intuitive qui catégorise le contenu par module et sous-module."
+                android:paddingBottom="8dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Contactez-nous : Vous avez des questions, des commentaires ou besoin d'aide ? Nous sommes là pour vous. Contactez-nous directement via l'application pour obtenir de l'aide ou partager vos idées."
+                android:paddingBottom="16dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Développé par :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="USTHB9raya a été fièrement développé par Mahfouf Akli et Meghaoui Mohand Amokrane. Notre objectif est de créer un environnement académique solidaire où les étudiants peuvent facilement accéder aux ressources dont ils ont besoin pour réussir."
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
