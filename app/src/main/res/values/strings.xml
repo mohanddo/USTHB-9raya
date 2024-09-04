@@ -16,10 +16,18 @@
     <string name="comment">Commentaire</string>
     <string name="contribute">Contribuer</string>
     <string name="desc_favorite_module">Add to favorites</string>
+    <string name="propos_de_usthb_9raya">À Propos de USTHB 9raya</string>
 
     <string-array name="faculties">
         <item value="Faculté D'informatique">Faculté Informatique </item>
-        <item value="Faculté De Chimie">Faculté de Chimie</item>"
+        <item value="Faculté De Chimie">Faculté De Chimie</item>"
+        <item value="Faculté De Chimie">Faculté De Physique</item>"
+        <item value="Faculté De Chimie">Faculté Des Mathématiques</item>"
+        <item value="Faculté De Chimie">Faculté De Génie Mécanique Et Génie Des Procédés</item>"
+        <item value="Faculté De Chimie">Faculté De Génie Électrique</item>"
+        <item value="Faculté De Chimie">Faculté Des Sciences Biologiques</item>"
+        <item value="Faculté De Chimie">Faculté De Génie Civil</item>"
+        <item value="Faculté De Chimie">Faculté De La Science De La Terre</item>"
     </string-array>
 
     <string-array name="type">
