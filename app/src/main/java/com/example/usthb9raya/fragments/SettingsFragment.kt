@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Toast
 import com.example.usthb9raya.AboutUsthb
 import com.example.usthb9raya.ContributeRank
 import com.example.usthb9raya.R
@@ -51,10 +52,17 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private fun sendEmail() {
         val emailIntent = Intent(Intent.ACTION_SEND).apply {
-            type = "vnd.android.cursor.dir/email"
-            putExtra(Intent.EXTRA_EMAIL, arrayOf("akli88mohand@gmail.com"))
+            type = "message/rfc822"
+            putExtra(Intent.EXTRA_EMAIL, arrayOf("usthb9raya@gmail.com"))
+            setPackage("com.google.android.gm")
         }
-        startActivity(Intent.createChooser(emailIntent, "Send email..."))
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send email..."))
+        } catch(e: Exception) {
+            Toast.makeText(context, "Gmail app is not installed", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
 
 
