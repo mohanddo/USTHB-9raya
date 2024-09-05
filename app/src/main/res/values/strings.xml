@@ -17,6 +17,8 @@
     <string name="contribute">Contribuer</string>
     <string name="desc_favorite_module">Add to favorites</string>
     <string name="propos_de_usthb_9raya">À Propos de USTHB 9raya</string>
+    <string name="ajouter_un_fichier">Ajouter Des Fichier</string>
+    <string name="changer_le_fichier">Changer Les Fichier</string>
 
     <string-array name="faculties">
         <item value="Faculté D'informatique">Informatique </item>

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
+import android.provider.OpenableColumns
 import android.text.TextUtils.replace
 import android.util.Log
 import android.widget.EditText
@@ -84,4 +85,54 @@ object Utils {
         return contentResolver.getType(uri)
     }
 
+    fun getFileNameFromUri(context: Context, uri: Uri): String {
+        var fileName: String? = null
+        val cursor = context.contentResolver.query(uri, null, null, null, null)
+        cursor?.use {
+            val nameIndex = it.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (nameIndex >= 0 && it.moveToFirst()) {
+                fileName = it.getString(nameIndex)
+            }
+        }
+        return fileName ?: "Unknown File"
+    }
+
+    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+
+        val selectedItems = BooleanArray(options.size)
+
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle(title)
+
+        builder.setMultiChoiceItems(options, selectedItems) { _, which, isChecked ->
+            selectedItems[which] = isChecked
+        }
+
+        builder.setPositiveButton("OK") { dialog, _ ->
+            val selectedOptions = options.filterIndexed { index, _ -> selectedItems[index] }.joinToString(", ")
+
+            textView.text = selectedOptions
+
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, _ ->
+            dialog.dismiss()
+        }
+
+        builder.show()
+    }
+
+    fun singleChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle(title)
+
+        builder.setSingleChoiceItems(options, -1) { dialogInterface, which ->
+            textView.setText(options[which])
+            dialogInterface.dismiss()
+        }
+
+        builder.show()
+    }
 }
