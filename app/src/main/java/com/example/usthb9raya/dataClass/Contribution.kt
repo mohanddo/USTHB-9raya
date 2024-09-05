@@ -10,5 +10,6 @@ data class Contribution(val fullName: String,
                         val fileNames: List<String>,
                         val contributionId: String,
     val mimeTypes: List<String>,
+                        val filesSize: Long,
                         val timestamp: Long = System.currentTimeMillis(),
 )

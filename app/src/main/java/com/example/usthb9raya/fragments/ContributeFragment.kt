@@ -158,12 +158,11 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private fun uploadFiles() {
         contributeButt.visibility = View.GONE
         progressBar.visibility = View.VISIBLE
-        progressBar.max = fileUris.size * 100 // Adjust progress bar to reflect multiple files
+        progressBar.max = fileUris.size * 100
 
         var totalBytesTransferred: Long = 0
         var totalBytes: Long = 0
 
-        // Calculate total file size for all files
         for (uri in fileUris) {
             val cursor = requireContext().contentResolver.query(uri, null, null, null, null)
             cursor?.use {
@@ -195,7 +194,7 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                     fileReference.downloadUrl.addOnSuccessListener { downloadUri ->
                         downloadUris.add(downloadUri.toString())
                         if (downloadUris.size == fileUris.size) { // Check if all files are uploaded
-                            handleAllUploadsSuccess(contributionId, downloadUris)
+                            handleAllUploadsSuccess(contributionId, downloadUris, totalBytes)
                         }
                     }
                 }
@@ -211,7 +210,7 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         }
     }
 
-    private fun handleAllUploadsSuccess(contributionId: String, downloadUris: List<String>) {
+    private fun handleAllUploadsSuccess(contributionId: String, downloadUris: List<String>, fileSizeInBytes: Long) {
         val contribution = Contribution(fullName.text.toString(),
             email.text.toString(),
             faculty.text.toString(),
@@ -221,7 +220,8 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             downloadUris,
             fileNames,
             contributionId,
-            mimeTypes
+            mimeTypes,
+            fileSizeInBytes
         )
         saveFileContributionToDatabase(contribution)
         progressBar.visibility = View.GONE
@@ -234,7 +234,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         val progress = (100.0 * totalBytesTransferred / totalBytes).toInt()
         progressBar.progress = progress
     }
-
 
     private fun saveFileContributionToDatabase(contribution: Contribution) {
         contributionsRef.child(contribution.contributionId).setValue(contribution).addOnCompleteListener { task ->
