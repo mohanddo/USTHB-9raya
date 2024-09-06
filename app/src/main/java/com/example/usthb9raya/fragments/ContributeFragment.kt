@@ -42,7 +42,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var progressBar: ProgressBar
     private lateinit var contributeButt: AppCompatButton
     private var uploadTasks: MutableList<UploadTask> = mutableListOf()
-    private var mimeTypes: MutableList<String> = mutableListOf()
     private lateinit var getContent: ActivityResultLauncher<String>
     private lateinit var addFileButt: AppCompatButton
 
@@ -55,7 +54,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             if(uris.isNotEmpty()) {
                 for(uri in uris) {
                     fileUris.add(uri)
-                    mimeTypes.add(getMimeType(requireContext(), uri) ?: "*/*")
                     fileNames.add(getFileNameFromUri(requireContext(), uri))
                 }
                 addFileButt.text = getString(R.string.changer_le_fichier)
@@ -220,7 +218,6 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             downloadUris,
             fileNames,
             contributionId,
-            mimeTypes,
             fileSizeInBytes
         )
         saveFileContributionToDatabase(contribution)
