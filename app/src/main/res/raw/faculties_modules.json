@@ -1,6 +1,6 @@
 [
   {
-    "faculty": "Faculté d'informatique",
+    "faculty": "Faculté d'Informatique",
     "modules": [
       {
         "module": "Algorithmes et Structures de données",
@@ -232,6 +232,236 @@
         "td": "https://drive.google.com/drive/folders/1_fUEpxATFY-s37lc1hqzYZM2SRXW5fX3?usp=drive_link",
         "exams": "https://drive.google.com/drive/folders/1ACp1h5SGbLeHUS9udiJEyJFoPP3iDUDx?usp=drive_link",
         "others": "https://drive.google.com/drive/folders/1fhluzzydQdhx_RGroBE9TY1rhgsYqXph?usp=drive_link",
+        "sousModules": []
+      }
+    ]
+  },
+
+  {
+    "faculty": "Faculté de Mathématiques",
+    "modules": [
+      {
+        "module": "Algèbre",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Algèbre 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1TGZoQR5gXpiz1fcbw0zce8pm1E0fVS8Y?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1ab1syP35ld0HpLphdzld3HWpcos6jtlA?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/10xpLCjYkSa8xbQ_4A60-lXQS00m3NC_I?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1psPVepb2BWsKcC08PcA-NkKHQanEPrVm?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1iBEP1Lp2x5je6HxuQ_Y35A60nWsNC-EB?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Algèbre 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1meM4rnevK_qiMSjlDBwiaZ2IaKks3K_Q?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1qdXhC5-llWUZZBIUSR3M4-snc0py56ci?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1j8KuVdBcjQ92FFIsFBe6qJzkH6WwtPZm?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1xjT91GWd-73_t66i--wUEDE8sDKReNnU?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1y-dq9vB98_B6RbIlE-D1awyeD-SJvbL9?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Algèbre 3",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1OrNpKFxvw6ofH-h-V1cJGO-Oy69mOsmM?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1k9Wjq4A2WDceKoulvJHf7lcpQgxhKBTZ?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1gAdAhvjdcnrfAHz59JhsOIPe8soct05g?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1DGpj3c0h_A6-p9HtqqLGcB0iF--_HGn7?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1VoVLvI79s6CuS_09qQkpJPspg4vz88r9?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Algèbre 4",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1D9ViOMk8O5jLIhoWvKBcl-AM32xhidmA?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1wsEpTB0UUGewIeHKvJOd-7ypHmDrr94H?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1KhXV1QBw8_xfgS0Htfm2KSe69iCdOOpn?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1v3FkgzFUy_VA0Gp5wf3g13LJutjePRrp?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/16sZR7GsLUkLeSHEOp57f7iLNHExQtQHJ?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Analyse",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Analyse 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1SneayVLxbwfbVoBRatlGZTHwJpqyqmKr?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1PeWe1QB_7WJZyFS5_HVRSD1MJKepOSzp?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1aeYok23rRHbcR5lEWfefnTCkIJukJbbb?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1vlw4gtskdvnEpkWtF6yHJP7EvCNLeYb7?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1quTTOB8PTgrszqTeySflZW1o1gsyILfT?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Analyse 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1OueBpl97BjuIjvgJ9ezXjrNPeeFlnf0B?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1HoCLoFRsXGKk7eCVweCohDIGfgYwnOfO?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1cBiTw7FqgCShXdb0gi2MtNd1Jv1n9qh0?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1QUVU237eVnKxvavRa6a1eVZaOXcAHcVI?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1jOUde0644Wq6oM2VSrszqEjT_y8hqpNU?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Analyse Numérique",
+        "course": "https://drive.google.com/drive/folders/1Kg5hmGDHMYhje59F6kt2uSA05dSyR48h?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1jTuQ1MAFiw4pkosFEi4QNTvLU3y_L2R3?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1wkz2fgz431JVm_y8NseKvoenY0IY_AHa?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1izZkBayBVbyIxb7WmrE0yR2NjpYsssHy?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1IcN1Q2nEJZd5vQFGu4Fh6J3hfyz1gMIs?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Géométrie",
+        "course": "https://drive.google.com/drive/folders/1GpCOm3rY4uVRbP9NVjdu-4RpNr1GtZN4?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1zCoQKlv_30vrrZd500WAyGjw-nrvst5c?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1pKRfgfjkSBMiAW3NnTuPv6yN8GQqmWUE?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1CQiKOyghkPPq-QZtgA4T24gmteGKaGWG?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1IX0sC6lTqJrstn9pJDR1dbKbpwobbBVI?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Logique Mathématique",
+        "course": "https://drive.google.com/drive/folders/19qaCIo67Dd44nqV6kIpYwkvRBM_pxlDG?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1foZgQ_mFFc9goANdtlFGwG08-W0nsOsF?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1ddzHA-66_kgMh2DcE59n81uvmqLqDWQo?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1G21w5VOcRBCFKk7HF5JybMNBohTonU4a?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/15X7ge7-GATV27ph2yNSmB3c5ydj_g1Rw?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mathématiques",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Mathématiques 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1uyUq8yT5T2_tHDhRexWzOlcv03jC9Xgf?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1GRnS0v7pYyTWTvBipbulGrWqa9t435mA?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/16qYw3GzBHwc5jehMmgmUCwh99t0pPAue?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1DzfbkAxo9VJIFX5bHPvI3z4FAUFRYG5b?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/14e6O_5Gu_-N5RS3t3lVkroS9YGh2CFmN?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Mathématiques 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1UKMSvTguD0Eeb9C2o8LovoE92FZytsQ-?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1I0phr7v9q06WoU1jUGomCzmr_m3K9SUy?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1aIOZria7PB-gP0SKrrQaxkLDD0E3uSdU?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1zMqechSbLuv6o70KW45DBh3gc5wZaYSz?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1dzVP9Ncs11xhwCak9kl84bI3CSMT45rJ?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Mathématiques 3",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1kuaInjxl_zEqrgma1kuGRY1vUcbaG8Q7?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1DgK4H0i2p9A_CCip2D1UJSXhlbQf437Y?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/15LgIDU6mEVC5jwlDafrD0Lg9c4D79x6g?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/16wD2r5CtoAVDfgBrBANM0bzPByGHj2Vc?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1Bm2aKQLPIn47DtTed6s62Gagy0DDc5Kl?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Mathématiques 4",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1frhsUkrXQzy5xjmpJk6MQFCrtRLJ80fP?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1TiC2dLq_0-W7BLneN34vR1nrHMY5aVML?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1dW8ouTzpXp65e8yNClBhuO3FTiE4O3U0?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1Kx3VB6RdtxQDtvdv9otKzL3YRjKWsf7E?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/17RRCr48KFxP5pqHhbYcpTMfZPzY3kQOP?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Mathématiques Discrètes",
+        "course": "https://drive.google.com/drive/folders/1rnrdmNOR4a_8kO1B3b5bpO7JmhD3eIWY?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1fxsiEmTW1Jpc9nOzSPWQp33lmj0PEET9?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/16aZCpiSs2QlUKM4yP_EQONm7If6WYs_K?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1bthpD1LV7BGlobVDdE8_Jj2EnPnGFtwm?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1SHEhU1jiqjNkBfYCGekLCiQfec5yxc-6?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mesure et Intégration",
+        "course": "https://drive.google.com/drive/folders/1jYzxk_IiGfQHdP6-1Yqv0QzA_LTTdl-x?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1NyYUFnc5IOonZPeK2nxAGLiu41BkyRrh?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1m6Iko5sWSqSzJnfxHcy0lXtE9__J0m9X?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1m3M9PDE_LFSZKoE_jXPx8tqUOaoj3T8u?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1E6iRr29BuHZhIEnGwz5tVWuhAcHqsFzi?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Méthodes Numériques",
+        "course": "https://drive.google.com/drive/folders/1ZMg1Pj5MmDRPzcfGyx5VGTX-ITv-PNHg?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1QMUfc8VAJtu0K7jqPzMZIFdRHmFWxuzE?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1FTHrZS8Hw7sFD7zPvWS9bdoxYRoD56--?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1eFVHrN1NEwoqp5Ori3wVSip2zN0XwC9n?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1Nt_i8hiyFvZR1zlOiA7AnyX4g-69mbpo?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Probabilités et Statistiques",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Probabilités 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/10nVdokKiWZR9mKYxDmNylNPQA_E4w57x?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/17wnJyXoCd6CNOkCBFsW35-JACCcZdYwa?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1H8xtVRRkhWcoxn8XH8dOe447T5QLrRqp?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1dXBbOGcQ_zV0rsnVk4KyQZgGkUiLxpAG?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/17G014xu-jMY5RtrnbfaNMQcO9EyiYK7V?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Probabilités 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1gyczA6s219eXiaoWzdBQf7BZrfU7Dx2L?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1s7BqpJoiGNNiPTfGAGN9IHYSjUJu1xM8?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/14qlfjMD7Fb6_Iy4yT1upAlC5qgWvvSkO?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1OQTtxLT8w5s4hPVfzCJFPKDUrEinFW7r?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1VT1CYO8C-AU8DvAfSJN0dd6iNx8JJt_g?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Statistiques 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1IrNIoe2VXdntlIrnGJ4nnzw23CM8BOLI?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1oqP3c-Hf0eVA2q_lEZeG-Iw-3PWvlOCO?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1GDa44GZZmeSeIZA2wKhOAnaLwXuh2zYK?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1aKaVkOBc9IzKTX81Dyzz-AdG5PgLCrFx?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1RpnElLtALjdAvvOZHXtZMHz_S0KpRtMZ?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Statistiques 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1H-iuHnWxQUfr3Jg0cK-q8i6MaaW5SwJs?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1m3tI_grEPOLhUDmwr-vh7gDHQ2-_dBw7?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1IhJFLuf1W3nQn6ZbTWPbE51-kwDHhl58?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1j4M1f2QflP1345A_OFGT4JIEIrjA2W1t?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/14RSNrd1A6Fmdum2jh8wWgU0mkcVSWjaA?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Théorie des Graphes",
+        "course": "https://drive.google.com/drive/folders/1cmE_32mFL0zN3-HIBMq1GaWR-Q8Kr4Uc?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1DDnW0loWV9zy9c8G1Z4LhXoC9fJPWv-6?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1-ADLBDBxzp9yMnkNk0o5g0TqI9DRtFJ1?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1c-NHMYUY-sBbfylWQT1TiPcQrZyFKcXR?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1VPYY4fEsI0jPFqZfV4fIVVvhevRFyItw?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Topologie",
+        "course": "https://drive.google.com/drive/folders/1eqEsnMMPSmr9EhCMxz4l4jL-kEnnfQ4n?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/13kd7kq2bOV-Bn_GEeHZl674gjMpFwOga?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/16VWL34fZXbz6Fcfs58fiDbKkbiJtVPio?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1NMbetKjZizGuytOAY5FhLei2YWFsaJO7?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1Wx3jmJhvbOHvwUxMOAKAVbrL6KgS0gnu?usp=drive_link",
         "sousModules": []
       }
     ]
@@ -588,9 +818,435 @@
         ]
       }
     ]
+  },
+
+  {
+    "faculty": "Faculté de Physique",
+    "modules": [
+      {
+        "module": "Analyse Technique",
+        "course": "https://drive.google.com/drive/folders/11qSWOXAd0AwnqDMilCT4OnVp6mUa6Nol?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1C6mkb_hBFebypCnO3Me5nwjJ7NvoH-Sj?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/11OgGdF8SmhuX6mrlJqsL6rkT4eWq_aPw?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1oH7rOBKncc-jfFp3Q6O9-asGrxGHbTN7?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1D2D8xcjA1PrD3xCeeWpDtQWN0ytYjZlV?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Cristallographie",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Cristallographie Physique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1Gxn3KlpUp7Wz_HNFVGro0xNtBy3Notau?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1K67DHZs9fDP9nuB7kXfNP6VtVWTiTb_a?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1v63QIBC9M_sD1KemEXlGwluNb_cdDBJA?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1PGIO9yidGLi3o6pcLDEnaMFIKSgqR0Bx?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1tiwvwpzGu9JLWl3ca4AU2oFl0PR3k4wf?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Électromagnétisme",
+        "course": "https://drive.google.com/drive/folders/1NHLLK07zl-Qoav_2kPnWnRGCsyD_8YMO?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/12oCzR0BVZLj1Ss1Z-rAPbtPFWfoSILMP?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1xhh160lV34N2Jfmvq0y2IUtxsXezEkDU?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1b-hxdImrT5pPszYL4XchHpJgEy4py0JW?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1LBTpK-w23IUUx8zUKOSW-B8SbbkMhwIn?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Environnement",
+        "course": "https://drive.google.com/drive/folders/1dHSjAnSH8kjYMa_suV_IqTYSeWi3c3ek?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1tf9xcDr5DGYHCRtKvLP73JbcTf8FHRxW?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/15WNTTeyME_Rok8J-rDe2yLIHERwPH7TC?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1IkviB9IMh1tI962V9WZQ2HWTVzUoX3m9?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1xD9WRaeOvC6a5amqIv4mH0qW0dqZUZMD?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mécanique Analytique",
+        "course": "https://drive.google.com/drive/folders/1Oy6DCcCYBpLQ9aHySaY5OZXhYaYgpF0p?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1ATlxVSQNgRB_Iy9Hq0-GcKXdGDsAmAOy?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/13eXCjaFoBD22zsR-HIOiRdABDzw_QV0H?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1A0LS_8IsQYWvkjdMFvw5ygP719zKKjPq?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1RJ-OP2M4enubsw6I5m9_mY4eiwSZpHsd?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mécanique des Fluides",
+        "course": "https://drive.google.com/drive/folders/1iq472ZVV3HV4HwTb4-3NZSAyn9JPoEvu?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1ZnovJ4cHW1-4Xh_xPGTTtErdds5G1BVg?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1V_RakF_S5z1k_DnGwR2pAd6Ox3RYZgFm?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1RNil1BNaaPpmLwLl7fplpN0ouadadSCD?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1_7wCsXrze2yUzZCie5Psh40JRb3Xl1TM?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mécanique Quantique",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Mécanique Quantique 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1oALoRyeuIk4zEh85uqPfH09yVuCdy-tb?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/183SJULeW-QmQROU_oj-L3BZIL4rur5Tc?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1FKb8Sl4pJb2s81i_secYNdjuft6cj_MH?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1SI4lZSQ2kcmLx5x1djQkuLNZMYzt0D6n?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1wShu6IK4mczzw92PAqi2_P85e6Sx1L8f?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Mécanique Quantique 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1G92gmSRU_exLM6X0HqIxC-pblJre1E6Z?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1wf9XEGHGxQaQKVSMzxJsUh2EJzTUhMHY?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1zQecR3hRQcM7wYsf3PQtqwiEKoieIOqs?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1ic7sELJt7b0e0iiZyHYJApQGhtj8r7Q9?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1shnR1MaMAPiunDH4iL8l625l4xGJvRGf?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Optique",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Optique Géométrique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1xLy6-nuPktT7V6C39KIs8TQRc0C_fWxy?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1H6VLr8Icy07UIsdRqsGI9L1Ow7bANDEY?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1MuXJvcYZzU_R-V9370cooY9d4E_DG86y?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1dyMVOIJa-8NAUXFCnyjUGFnP9WRoEKa1?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1tkphfs9ZF1lvhiLubdVl4UuV4rwZy12b?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Spectroscopie",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1j2Ea8l3Z8op8rsBPvrhY2vzvXM_wrkgL?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1cbNVYmPy96B5OmFJv4qtD2PTdXL0P4EN?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1nWhmnzjSTZoyo5caWQg71aXzfPc2rZZI?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/13jVusrPqm3iveIypvm1hWPDse0qG1G7E?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1UhuOc_xRo3Du1u44zgZ-zYRYqai-SJEX?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Physique",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Physique 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1uf4u4_JP4-vjx1LV6LEMRB42floTT6z0?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1bBvwz0HMJK4bnSp-HiTrRqHe_9UD0kZD?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1mMAvQoPvX_WTiszsLeiucp9w2dw0fkt_?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1JrWJFkBvnS7vNO8zqQ9Pr-9DOdTmwNxP?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/171EA6leSWkty_8msFkVG4PZa3j7gRGRQ?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Physique 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1e-Gibhg-pHFxBuJHxfFcDCfx-gqNfP-C?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1_gPqcbmWtwNhBoxberTblB08ZeWJ7TM9?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1P3iUSGnNzSN2uev9wRbqKcnmhHZwIUEY?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/16vpaQ-1XH0tQ0ZJSPBX85yXuUXMpVsxi?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1F0fejAvI9Ll9CfIZkTZqTrjQdcSIeEqq?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Thermodynamique et Cinétique Chimique",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Thermodynamique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1rIShExa_5SosdPZIegPhTBYm7YuJYUYD?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1ose0LZYDXtoU4sYaMDFLnHVGq9LaQqyK?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1LN6Gnbobhd4LyPnoxbNg23vIpNNaR_bD?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1m76Gv1ph6tEpaNulj4Bqv8fjc0Rxgg3Z?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1Sz_rYsSSjvI4PBXprMnQWIiTSq4W29g7?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Thermodynamique et Cinétique Chimique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/17IQw_AKyssjbZMExwQ9Kle3gOJGMq5Vy?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1EqL4r2tH3puKUqHrodCRmycN6Y6sPokb?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1jwlHRwGlPWVzASiBiba2WjKqn1RdyeFC?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1d3AO7vlcH1xv1NGn3z95DgbysZ6SwobT?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1tpO_P-Uzbw1Ezvq55wCTiNe0_wIXSJqk?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Vibrations-Ondes et Oscillations",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Oscillations",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1sjGwLyanT3aU91NsBuKFCcctNEtV7wUM?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/18ZLLuAGYFzkxJBG5a_-GCoZogVJxKHwb?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1s98p7zfEpfm8OB-SCGKh1aWu9GKynl2S?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1DBXIlvSnjy4dVBYYrQPO6AHi7WLztEzg?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1N-v9qvtkuuhvZ42vAcKLC_WQr6LD4tmp?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Vibrations-Ondes",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1ECw_XFqtv0kxDEQSw1v95LNQYCnN-lnl?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/17n2qvRmU3qvKaqxX1RLoC5iTJgy3bTga?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/18MLGV9LooS85q7o_nDQVJNP_JNDJvmcC?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1H4-X9GbNMh_WvQTF1oE_vtAFbc5PHac6?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1S_n0jmMa3jV4r_npnZOzipLMKwX-_MgR?usp=drive_link"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "faculty": "Faculté des Sciences de la Terre",
+    "modules": [
+      {
+        "module": "Géologie",
+        "course": "https://drive.google.com/drive/folders/1x46-hmr4LLFpC5OyzCgg00Gg7RR9vwFc?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/12rITxzo1b53qwQPmr0vzw_cWaR1HzO87?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1O1X9ZZXRJMIZsQhMGF8_ozhyaWcfAN4G?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1-Il4n9ptRGnFdjWfTnWX1wn1wjrQUyk8?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1Fxx4v5DL-AUiObLGmCxzSxZ2kOP1m7FW?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Hydraulique Générale",
+        "course": "https://drive.google.com/drive/folders/1qUUsOD2UGfzWgV51saPqvHUODXypJ60o?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1pW8oyoz2Z2rkHJObWOIdc9oE41rtbSOq?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1BA8i4oCutEjL6H3FnHUrmbw8b7XiZ3Ew?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1cWukyTMSZUQ25tlDxwACzuB9ZOslN9HF?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1ekRDOh0QIaOUD-rfoNkU506LqgtnVLWK?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Hydrologie",
+        "course": "https://drive.google.com/drive/folders/1wynIr1ilVv-LPxbwSv2xqRxI6uaXri10?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1gwezn1zsxlMJHA3BrAo4MhWg2p4nii3b?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/13g5VfQC3oIgrG5ppbgRtAszCRibeFPNO?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1gjHqTi8bYEVINB0Cf17Hl6bHHg1orq62?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1UzlZkKXcZqOzJHNNE_p7ZuffT83er5I2?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Mécanique des Sols",
+        "course": "https://drive.google.com/drive/folders/1r4LGHCXeg0im-eID_EL1TEMpPfbz2M37?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1PM9dB4xAjA9A9ru1ntX-vUohnlqQo_hi?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/10klXkrvQHyswOII76w0VxDsrwjV2ABjg?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1rnQAeW_KmdH6dhcarjasSt4OJ5-HeffD?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1NmYmuplFkvZfVbR_3wlwrJMdr2eicssG?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Métrologie",
+        "course": "https://drive.google.com/drive/folders/1ayx5cOEMW56a8Ipy8Wg6yxOTTeWhfQfP?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1TW3QkH_2AtQKxXDjM3N-hAJKhT_zxK_w?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1PkVYKRQEdd9dGVdmNPBHNihqunigMK-8?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/10VCuGnhxh5n4zb59DFZbUYfAaWblVH0u?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1_PDG605rp3wwN1fULBw-DaqRwCga01bm?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Topographie",
+        "course": "https://drive.google.com/drive/folders/1suSuGc8sBf0qeKkFYx6wBrm8ZFjOQuq2?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1-ORUBZTLoVIZSoB_mOhrC88PeArg5Avm?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1ruaxLe3v9OKU4hZgSo5-FuReNJeNWUky?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1CareEnlpMc8fyfD8WvSTVjZ9qQRGAg2P?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1zMB-6YLRfyLQRDycM9lb1wEBuykSZJ2i?usp=drive_link",
+        "sousModules": []
+      }
+    ]
+  },
+
+  {
+    "faculty": "Activités Extrascolaires",
+    "modules": [
+      {
+        "module": "Carrières en Science et Technologie",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Carrières en Science et Technologie 1",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/12ye_K3VSUGEAGH2GXnqfcPsQStuf5m_P?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1a2Vv0Jo0eviqLkN0BMWvNw19SJ8lZm14?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1T7vuwdZBRpvLvpWyjtZmnZhjOiICznai?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1wfQqiCTK20JCjCtvsju8p-VzlubzbNlt?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1gwCSB4v8STKGVwtrOVtFxAgsx_DFgw7D?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Carrières en Science et Technologie 2",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1G4vTmRVXB7ZHMJKCXNODixmS51BTKw06?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/17PZ4CzmSE4KL-zy1-ZCLuMLR-hHM7fqz?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1iybEHRROrTJMablMGIO7Ouq5HROAaVCX?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1j-3Sl6CoQIXUfghf6zRvflVLjX1r-1Cd?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1qsjN8Ok2Sxj1ODwbTPII3rM-Uesr3WWM?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Dessin Technique",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Dessin Assisté par Ordinateur (DAO)",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1j6J7Xa-6H6SG-uyZEFUlJ2A2dzzAbl6r?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/10DCrrWKfOsdZqJZ-sCr_B40cnbASq-uz?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1fDt4GRAWPbnDf6_7cSu61KjUHmLVmOVH?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1LtAJOD9UZcYIL-BECgPbW8cZLzjxejhj?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1BVqjhzh2OpRovTETafWyyyJQjffOoJkU?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Dessin Technique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1qYZXoEShLoz9WjCn1GAm1f3PYT9V5-qf?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1I2lZ4UQQJk9dQ7caRwgzPxEVoOA1FQx1?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1JW4k5oP6KOZvB5MydRmmj71VqmFsbIaZ?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1UWJzmtPGhJlE6zCkdD6Ext0-OKJZfRUp?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1mmddPHlYaGBkMFJArwdPtChKCrqhFJqM?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Économie d’Entreprise",
+        "course": "https://drive.google.com/drive/folders/1cmuQHojZuDvqNRLBk9XOg2KG2foe5mD6?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1be2fcO7FrC-P-gQgbEtgAf2ZYP-OJPVy?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1SgxxPyaFMlYE4XF0NL6MUvJPxbrnzBvE?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1Z2ChvfsMcv-UdKGkiOTTAddshWyLw-jD?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1CCtcDcmn1eXzfQoHDHKoYQaSuwgekehS?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Entrepreneuriat",
+        "course": "https://drive.google.com/drive/folders/1jxAZMtwLyXKTJ0Qqu-6o3NFDWenZ_-Bx?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/1AHTtOrQTm7HPi0Gq4J6eR7J12aw6iAEB?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1TTDHhTXvBWCTBiqSOxNgP11cr2hoD1L6?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1fDiCFOuozWih2BoDnK0zcuptq47Ok24D?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1kkdIxu9mQ9dDeOVtquo5GYzChv_pxvVF?usp=drive_link",
+        "sousModules": []
+      },
+      {
+        "module": "Histoire des Sciences",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Histoire de la Physique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1K_qHFyEutEDMsNNv9DcJOuhMZKHGIdaD?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1wXEpEg0VrdIPd991dQ4-UynQ12eR3ku_?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1GhRkFL-35lm5sbEDv6pHu5dowc2cXj8k?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1JLVpTPPpba6sXOZ9w18Rn8eEIsjqlulP?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1QRbBCVz0ib20C1OYNkfctTGKfEKDubII?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Histoire des Sciences",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1Axh8fSj6OGzfRW0FaClSZ0aKTZjp9h2V?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1ehEOM267vshfJPQWGtQPrvfPtxgLqebc?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1TniC8egql0V9QDTO1KxkHIEnVjl5KjWE?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/16vLNntSXBL4tyaU0OogL8FvsxATX9x5N?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1FKQNzJKUwA-fH0VtkaVBBWq87x_GElSr?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Langue Étrangère",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Anglais",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1TU2vIT5VLET64NjshN4E6U6y0MIl5GB0?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1CGf1CQG3RhfFCkaUphsqAEGeIKeA2Ys5?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1VmeFmGoFQqVcd1sQgf9fEy2PhhN8raRj?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1nYOOzcGku5hxbEvwYNfpeUR03pOHh0jS?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1MTEBoOM28PIlQUDZhtUgZKaQKJfe9BHi?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Anglais Technique",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1cCl4jlaqgNIoBovAEX0XjVgU3eG5MKow?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1QPk0Jwa3XZ810GQTtQI3BKjYjaqXCgDG?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1zWvwSIqZj2S5kaG-LyBx9HsSsqP3Vx10?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1v1ngDc5oGOIUkAGGCGAeoWqV2JzvO5pG?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1TmZ6beIeyTUX9thKWNnWDCwrpzQCL9xo?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Français",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1ztGglk9IK3zyG86BvAj_sD2MbFV8Jll2?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1Z6fEbMhqJUUjC71HIUo5BysodG0p0kKt?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1psVxmgxRawbPjPLnGCMBGsW9vFMdO7ZM?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1JOAanhs2ChZL1z7YYPgfja91v_cdS_Vb?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1b1BMgpoJb8HkXHwVfjcJ9dPpzJmyK3rA?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Méthodologie de Rédaction et de Présentation",
+        "course": "",
+        "tp": "",
+        "td": "",
+        "exams": "",
+        "others": "",
+        "sousModules": [
+          {
+            "sousModuleName": "Méthodologie de Présentation",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/1uxHJKm4lhow8ETW_LLf1enVLlbOGzI2S?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1rHTmZR2V80XI16QMok4_Wz2oKTt33SAr?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1FJO5B-ypQ0GIj1rUVJ7t7zuqacjlWYaN?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1uILuunPoDW25HJNa8zQs3s3LVEWGQeoe?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1UCsdN85-hJ6AoeBN0xNBSzO8WE7FQz3y?usp=drive_link"
+          },
+          {
+            "sousModuleName": "Méthodologie de Rédaction",
+            "sousModuleCourse": "https://drive.google.com/drive/folders/17VrG9lW3RKu8r13RferAqfpzwiK8suSB?usp=drive_link",
+            "sousModuleTp": "https://drive.google.com/drive/folders/1hzQviU_ww6IttsS_MCJaIeQFpK41oli7?usp=drive_link",
+            "sousModuleTd": "https://drive.google.com/drive/folders/1fx1O88C4YNBG63-wUp0HNrcpt_0dSpaj?usp=drive_link",
+            "sousModuleExams": "https://drive.google.com/drive/folders/1m4MwaKs5yXh8rTg7VhMIsmQ8QKoQR-6j?usp=drive_link",
+            "sousModuleOthers": "https://drive.google.com/drive/folders/1hBRce9am4Jsb69LcFOgGvuCLUFMeJ8OH?usp=drive_link"
+          }
+        ]
+      },
+      {
+        "module": "Projets Professionnels et Gestion d’Entreprise",
+        "course": "https://drive.google.com/drive/folders/1A_lVlA_68BnUUk876BLUW-IXPxu8j9Ff?usp=drive_link",
+        "tp": "https://drive.google.com/drive/folders/12CVA-8ODK0ggG4c9iV39HpkjmaHaY4ZU?usp=drive_link",
+        "td": "https://drive.google.com/drive/folders/1DAQ36YJzh8nEmxsUja_u-fZFgZIxKG9h?usp=drive_link",
+        "exams": "https://drive.google.com/drive/folders/1KSwWqizYvfcHtXrwVyTTYKzMeVzTRLxh?usp=drive_link",
+        "others": "https://drive.google.com/drive/folders/1gDpT5b-BaCxJXxkkZcpMHHGSvLmz4qgc?usp=drive_link",
+        "sousModules": []
+      }
+    ]
   }
 ]
-
-
-
-
