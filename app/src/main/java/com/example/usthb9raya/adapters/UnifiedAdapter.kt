@@ -1,6 +1,7 @@
 package com.example.usthb9raya.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.usthb9raya.R
 import com.example.usthb9raya.Utils.Utils
+import com.example.usthb9raya.YouTubeActivity
 import com.example.usthb9raya.dataClass.Faculty
 import com.example.usthb9raya.dataClass.Module
 import com.example.usthb9raya.dataClass.SousModule
@@ -30,6 +32,7 @@ class UnifiedAdapter(
         private const val TYPE_SOUS_MODULE = 2
     }
 
+    // Determine the view type based on the object type in the list
     override fun getItemViewType(position: Int): Int {
         return when (itemList[position]) {
             is Faculty -> TYPE_FACULTY
@@ -39,23 +42,18 @@ class UnifiedAdapter(
         }
     }
 
+    // Inflate different layouts based on view type
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return when (viewType) {
             TYPE_FACULTY -> FacultyViewHolder(inflater.inflate(R.layout.faculty_row, parent, false))
             TYPE_MODULE -> ModuleViewHolder(inflater.inflate(R.layout.module_row, parent, false))
-            TYPE_SOUS_MODULE -> SousModuleViewHolder(
-                inflater.inflate(
-                    R.layout.sous_module_row,
-                    parent,
-                    false
-                )
-            )
-
+            TYPE_SOUS_MODULE -> SousModuleViewHolder(inflater.inflate(R.layout.sous_module_row, parent, false))
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
 
+    // Bind data to the appropriate ViewHolder based on the item type
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is FacultyViewHolder -> holder.bind(itemList[position] as Faculty)
@@ -108,6 +106,7 @@ class UnifiedAdapter(
         private val tdLayout: LinearLayout = itemView.findViewById(R.id.linear_td)
         private val examsLayout: LinearLayout = itemView.findViewById(R.id.linear_exams)
         private val othersLayout: LinearLayout = itemView.findViewById(R.id.linear_others)
+        private val youtubeLayout: LinearLayout = itemView.findViewById(R.id.linear_youtube)
         private val moduleName: TextView = itemView.findViewById(R.id.text_view_module)
         private val submoduleRecyclerView: RecyclerView = itemView.findViewById(R.id.submodule_recycler_view)
         private val moduleArrow: ImageView = itemView.findViewById(R.id.ic_arrow_module)
@@ -143,6 +142,11 @@ class UnifiedAdapter(
             tdLayout.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as Module).td_link) }
             examsLayout.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as Module).exams_link) }
             othersLayout.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as Module).others_link) }
+            itemView.findViewById<LinearLayout>(R.id.linear_youtube).setOnClickListener {
+                val module = itemList[adapterPosition] as Module
+                context.startActivity(Intent(context, YouTubeActivity::class.java).apply {
+                    putExtra("MODULE_NAME", module.module_name)
+                } )}
 
             moduleHeart.setOnClickListener {
                 val module = itemList[adapterPosition] as Module
@@ -170,6 +174,7 @@ class UnifiedAdapter(
             tdLayout.visibility = visibility
             examsLayout.visibility = visibility
             othersLayout.visibility = visibility
+            youtubeLayout.visibility = visibility
             moduleLayout.setBackgroundResource(
                 if (isVisible) R.drawable.bck_textview else R.drawable.bck_click_textview
             )
@@ -260,8 +265,9 @@ class UnifiedAdapter(
         private val sousModuleCourse: LinearLayout = itemView.findViewById(R.id.linear_sous_module_course)
         private val sousModuleExams: LinearLayout = itemView.findViewById(R.id.linear_sous_module_exams)
         private val sousModuleOthers: LinearLayout = itemView.findViewById(R.id.linear_sous_module_others)
+        private val sousModuleYoutube: LinearLayout = itemView.findViewById(R.id.linear_sous_module_youtube)
         private val sousModuleArrow: ImageView = itemView.findViewById(R.id.ic_arrow_sous_module)
-        private val sousModuleHeart: ImageView = itemView.findViewById(R.id.ic_favorite_sous_module) // Heart icon
+        private val sousModuleHeart: ImageView = itemView.findViewById(R.id.ic_favorite_sous_module)
 
         init {
             sousModule.setOnClickListener {
@@ -275,6 +281,13 @@ class UnifiedAdapter(
             sousModuleTd.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as SousModule).sous_module_td_link) }
             sousModuleExams.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as SousModule).sous_module_exams_link) }
             sousModuleOthers.setOnClickListener { Utils.openDriveLink(context, (itemList[adapterPosition] as SousModule).sous_module_others_link) }
+
+            sousModuleYoutube.setOnClickListener {
+                val sousModule = itemList[adapterPosition] as SousModule
+                context.startActivity(Intent(context, YouTubeActivity::class.java).apply {
+                    putExtra("MODULE_NAME", sousModule.sous_module_name)
+                })
+            }
 
             sousModuleHeart.setOnClickListener {
                 val sousModule = itemList[adapterPosition] as SousModule
@@ -300,11 +313,18 @@ class UnifiedAdapter(
             sousModuleTd.visibility = visibility
             sousModuleExams.visibility = visibility
             sousModuleOthers.visibility = visibility
+            sousModuleYoutube.visibility = visibility
             this.sousModule.setBackgroundResource(if (isExpanded) R.drawable.bck_click_textview else R.drawable.bck_textview)
             sousModuleArrow.setImageResource(arrowResource)
 
             val isFavorite = isSousModuleInFavorites(sousModule)
             updateHeartIcon(isFavorite)
+            sousModuleYoutube.setOnClickListener {
+                val module = itemList[adapterPosition] as SousModule
+                context.startActivity(Intent(context, YouTubeActivity::class.java).apply {
+                    putExtra("MODULE_NAME", module.sous_module_name)
+                })
+            }
         }
 
         private fun updateHeartIcon(isFavorite: Boolean) {
@@ -375,5 +395,6 @@ class UnifiedAdapter(
             }
         }
     }
+
 
 }

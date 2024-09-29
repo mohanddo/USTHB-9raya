@@ -24,6 +24,18 @@ object Utils {
         }
     }
 
+    fun openYouTubeLink(context: Context, url: String) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse(url)
+        intent.setPackage("com.google.android.youtube")
+        if (intent.resolveActivity(context.packageManager) != null) {
+            context.startActivity(intent)
+        } else {
+            intent.setPackage(null)
+            context.startActivity(intent)
+        }
+    }
+
     fun isEditTextEmpty(edittext: EditText) : Boolean {
         val text = edittext.text.toString().trim()
         if (text.isEmpty()) {

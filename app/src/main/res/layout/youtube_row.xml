@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/youtube_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bck_textview"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bck_ic_design_youtube"
+            android:src="@drawable/ic_youtube"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_youtube"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="8dp"
+            android:gravity="center_vertical"
+            android:text="name of vedio"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

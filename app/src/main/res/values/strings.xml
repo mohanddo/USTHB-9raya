@@ -4,6 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="others">Others</string>
     <string name="autres">Autres</string>
+    <string name="youtube">Youtube lien</string>
     <string name="examens">Examens</string>
     <string name="td">TD</string>
     <string name="tp">TP</string>
@@ -38,5 +39,6 @@
         <item value="others">Autres</item>
         <item value="Courses">Cours</item>
         <item value="exams">Examens</item>
+        <item value="youtube">Youtube lien</item>
     </string-array>
 </resources>
