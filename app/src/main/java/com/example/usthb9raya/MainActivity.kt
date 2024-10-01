@@ -1,7 +1,9 @@
 package com.example.usthb9raya
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
@@ -9,6 +11,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.usthb9raya.Utils.FirebaseUtil.contributionsRef
+import com.example.usthb9raya.Utils.Utils
+import com.example.usthb9raya.dataClass.Contribution
 import com.example.usthb9raya.fragments.HomeFragment
 import com.example.usthb9raya.databinding.ActivityMainBinding
 import com.example.usthb9raya.fragments.ContributeFragment
@@ -140,5 +145,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }
 

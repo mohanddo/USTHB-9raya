@@ -97,7 +97,7 @@ object Utils {
         return fileName ?: "Unknown File"
     }
 
-    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: () -> Unit) {
 
         val selectedItems = BooleanArray(options.size)
 
@@ -112,8 +112,8 @@ object Utils {
             val selectedOptions = options.filterIndexed { index, _ -> selectedItems[index] }.joinToString(", ")
 
             textView.text = selectedOptions
-
             dialog.dismiss()
+            action.invoke()
         }
 
         builder.setNegativeButton("Cancel") { dialog, _ ->
@@ -123,7 +123,7 @@ object Utils {
         builder.show()
     }
 
-    fun singleChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+    fun singleChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: () -> Unit) {
 
         val builder = AlertDialog.Builder(context)
         builder.setTitle(title)
@@ -131,6 +131,7 @@ object Utils {
         builder.setSingleChoiceItems(options, -1) { dialogInterface, which ->
             textView.setText(options[which])
             dialogInterface.dismiss()
+            action.invoke()
         }
 
         builder.show()
