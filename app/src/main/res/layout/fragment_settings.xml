@@ -17,21 +17,12 @@
         android:elevation="16dp"
         android:background="@drawable/bck_top_settings">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_configuration"
-            android:layout_weight="0.9"
-            android:layout_marginStart="8dp"
-            android:layout_gravity="center">
-
-        </ImageView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="0.1"
+           android:layout_marginStart="16dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:padding="8dp"
