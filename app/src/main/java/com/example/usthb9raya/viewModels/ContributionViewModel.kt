@@ -11,6 +11,7 @@ class ContributionViewModel: ViewModel() {
     var contributeButtonVisibility = MutableLiveData<Int>()
     var addFileButtonText = MutableLiveData<String>()
     var enableAddFileButton = MutableLiveData<Boolean>()
+    var youtubeLinkEditTextVisibility = MutableLiveData<Int>()
 
     fun setProgress(value: Int) {
         progress.value = value
@@ -40,5 +41,7 @@ class ContributionViewModel: ViewModel() {
         enableAddFileButton.value = isEnabled
     }
 
-
+    fun setYoutubeLinkEditTextVisibility(visibility: Int) {
+        youtubeLinkEditTextVisibility.value = visibility
+    }
 }

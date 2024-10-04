@@ -38,6 +38,7 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var module: EditText
     private lateinit var type: TextView
     private lateinit var comment: EditText
+    private lateinit var youtubeLink: EditText
     private var fileUris: MutableList<Uri> = mutableListOf()
     private var fileNames: MutableList<String> = mutableListOf()
     private lateinit var progressBar: ProgressBar
@@ -84,8 +85,9 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             addFileButt.isEnabled = isEnable
         }
 
-
-
+        viewModel.youtubeLinkEditTextVisibility.observe(viewLifecycleOwner) { visibility ->
+            youtubeLink.visibility = visibility ?: View.GONE
+        }
 
         addFileButt = binding.buttAddFile
         getContent = registerForActivityResult(ActivityResultContracts.GetMultipleContents()) { uris: List<Uri> ->
@@ -104,24 +106,25 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         faculty = binding.faculty
         module = binding.module
         type = binding.type
+        youtubeLink = binding.youtubeLink
         comment = binding.comment
 
 
         contributeButt = binding.buttContribute
         contributeButt.setOnClickListener {
-            if(!isEditTextEmpty(fullName) &&
-                isValidEmail(email) &&
-                !isTextViewEmpty(faculty) &&
-                !isEditTextEmpty(module) &&
-                !isTextViewEmpty(type)
+            if((isEditTextEmpty(fullName) ||
+                !isValidEmail(email) ||
+                isTextViewEmpty(faculty) ||
+                isEditTextEmpty(module) ||
+                isTextViewEmpty(type))
                 ) {
-
-                if (fileUris.isNotEmpty()) {
-                    handleSelectedFile(fileUris)
-                } else {
-                    Toast.makeText(requireContext(), "Veuillez sélectionner un fichier.", Toast.LENGTH_SHORT).show()
-                }
+                return@setOnClickListener
             }
+            if (youtubeLink.visibility == View.VISIBLE && !isEditTextEmpty(youtubeLink)) {
+                    return@setOnClickListener
+            }
+
+            handleSelectedFile(fileUris)
         }
 
         addFileButt.setOnClickListener {
@@ -138,7 +141,24 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
 
         val typeList = resources.getStringArray(R.array.type)
         type.setOnClickListener {
-            multiChoiceDialog(requireContext(), typeList, "Type", type) {
+            multiChoiceDialog(requireContext(), typeList, "Type", type) { selectedOptionsContainYoutubeLink, youtubeLinkIsTheOnlySelectedOption ->
+
+                if (youtubeLinkIsTheOnlySelectedOption) {
+                    addFileButt.setOnClickListener {
+                        Toast.makeText(requireContext(), "Vous ne pouvez pas sélectionner que le lien YouTube", Toast.LENGTH_LONG).show()
+                    }
+                } else {
+                    addFileButt.setOnClickListener(null)
+                    addFileButt.setOnClickListener {
+                        openFilePicker()
+                    }
+                }
+
+                if(selectedOptionsContainYoutubeLink) {
+                    viewModel.setYoutubeLinkEditTextVisibility(View.VISIBLE)
+                } else {
+                    viewModel.setYoutubeLinkEditTextVisibility(View.GONE)
+                }
                 viewModel.setTypeText(type.text.toString())
             }
         }
@@ -166,23 +186,31 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
 
     private fun handleSelectedFile(uris: List<Uri>) {
 
-        try {
-            val fileSize = getFileSize(uris)
+        if(type.text.toString() == getString(R.string.lien_youtube)) {
+            val contributionId = System.currentTimeMillis().toString()
+            saveFileContributionToDatabase(contributionId, youtubeLink = youtubeLink.text.toString())
+        } else {
+            if (fileUris.isNotEmpty()) {
+                try {
+                    val fileSize = getFileSize(uris)
 
-            val maxFileSize = 200 * 1024 * 1024
+                    val maxFileSize = 200 * 1024 * 1024
 
-            if (fileSize > maxFileSize) {
-                Toast.makeText(requireContext(), "Les fichiers sont trop volumineux (plus de 200 Mo)", Toast.LENGTH_LONG).show()
-                return
+                    if (fileSize > maxFileSize) {
+                        Toast.makeText(requireContext(), "Les fichiers sont trop volumineux (plus de 200 Mo)", Toast.LENGTH_LONG).show()
+                        return
+                    }
+
+                    uploadFiles()
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(requireContext(), "Échec de l'ouverture du fichier", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(requireContext(), "Veuillez sélectionner un fichier.", Toast.LENGTH_SHORT).show()
             }
-
-            uploadFiles()
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(requireContext(), "Échec de l'ouverture du fichier", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun getFileSize(uris: List<Uri>): Long {
@@ -243,7 +271,8 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                     fileReference.downloadUrl.addOnSuccessListener { downloadUri ->
                         downloadUris.add(downloadUri.toString())
                         if (downloadUris.size == fileUris.size) {
-                            handleAllUploadsSuccess(contributionId, downloadUris, totalBytes)
+                            saveFileContributionToDatabase(contributionId, downloadUris, totalBytes,
+                                youtubeLink.text.toString().ifEmpty { null })
                         }
                     }
                 }
@@ -262,27 +291,26 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         }
     }
 
-    private fun handleAllUploadsSuccess(contributionId: String, downloadUris: List<String>, fileSizeInBytes: Long) {
-        val contribution = Contribution(fullName.text.toString(),
-            email.text.toString(),
-            faculty.text.toString(),
-            module.text.toString(),
-            type.text.toString(),
-            comment.text.toString(),
-            downloadUris,
-            fileNames,
-            contributionId,
-            fileSizeInBytes
-        )
-        saveFileContributionToDatabase(contribution)
-    }
-
     private fun updateProgressBar(totalBytesTransferred: Long, totalBytes: Long) {
         val progress = (100.0 * totalBytesTransferred / totalBytes).toInt()
         viewModel.setProgress(progress)
     }
 
-    private fun saveFileContributionToDatabase(contribution: Contribution ) {
+    private fun saveFileContributionToDatabase(contributionId: String, downloadUris: List<String>? = null, fileSizeInBytes: Long? = null, youtubeLink: String? = null) {
+
+        val contribution = Contribution(contributionId,
+            fullName.text.toString(),
+            email.text.toString(),
+            faculty.text.toString(),
+            module.text.toString(),
+            type.text.toString(),
+            comment.text.toString().ifEmpty { null },
+            downloadUris,
+            if (downloadUris == null) null else fileNames,
+            fileSizeInBytes,
+            youtubeLink
+        )
+
         contributionsRef.child(contribution.contributionId).setValue(contribution).addOnCompleteListener { task ->
 
 
@@ -311,6 +339,8 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                 module.text.clear()
                 type.hint = "Type"
                 type.text = ""
+        youtubeLink.hint = "Lien Youtube"
+        youtubeLink.text.clear()
                 comment.hint = "Comment"
                 comment.text.clear()
                 fileUris = mutableListOf()

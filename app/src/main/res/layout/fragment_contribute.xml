@@ -118,6 +118,22 @@
                 android:textColor="@color/black"/>
 
 
+            <EditText
+                android:id="@+id/youtube_Link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center_vertical"
+                android:ems="10"
+                android:textSize="18sp"
+                android:hint="@string/youtube_link"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="8dp"
+                android:minHeight="48dp"
+                android:background="@drawable/bck_user_input"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
             <EditText
                 android:id="@+id/comment"

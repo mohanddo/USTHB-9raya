@@ -6,13 +6,10 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.provider.OpenableColumns
-import android.text.TextUtils.replace
 import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.startActivity
-import androidx.fragment.app.Fragment
 
 object Utils {
     fun openDriveLink(context: Context, url: String?) {
@@ -109,7 +106,7 @@ object Utils {
         return fileName ?: "Unknown File"
     }
 
-    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: () -> Unit) {
+    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: (selectedOptionsContainYoutubeLink: Boolean, youtubeLinkIsTheOnlySelectedOption: Boolean) -> Unit) {
 
         val selectedItems = BooleanArray(options.size)
 
@@ -125,7 +122,7 @@ object Utils {
 
             textView.text = selectedOptions
             dialog.dismiss()
-            action.invoke()
+            action.invoke(selectedOptions.contains("Lien Youtube"), selectedOptions == "Lien Youtube")
         }
 
         builder.setNegativeButton("Cancel") { dialog, _ ->
