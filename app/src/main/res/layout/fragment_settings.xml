@@ -47,6 +47,7 @@
             android:orientation="horizontal"
             android:background="@drawable/bck_settings_text"
             android:padding="8dp"
+            android:visibility="gone"
             android:layout_marginBottom="16dp">
 
             <ImageView
