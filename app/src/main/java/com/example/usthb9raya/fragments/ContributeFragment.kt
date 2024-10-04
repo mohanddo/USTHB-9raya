@@ -1,5 +1,6 @@
 package com.example.usthb9raya.fragments
 
+import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -12,12 +13,12 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.usthb9raya.R
 import com.example.usthb9raya.Utils.FirebaseUtil.contributionsRef
 import com.example.usthb9raya.Utils.FirebaseUtil.storageRef
 import com.example.usthb9raya.Utils.Utils
 import com.example.usthb9raya.Utils.Utils.getFileNameFromUri
-import com.example.usthb9raya.Utils.Utils.getMimeType
 import com.example.usthb9raya.Utils.Utils.isEditTextEmpty
 import com.example.usthb9raya.Utils.Utils.isTextViewEmpty
 import com.example.usthb9raya.Utils.Utils.isValidEmail
@@ -25,7 +26,7 @@ import com.example.usthb9raya.Utils.Utils.multiChoiceDialog
 import com.example.usthb9raya.Utils.Utils.singleChoiceDialog
 import com.example.usthb9raya.dataClass.Contribution
 import com.example.usthb9raya.databinding.FragmentContributeBinding
-import com.google.firebase.storage.StorageException
+import com.example.usthb9raya.viewModels.ContributionViewModel
 import com.google.firebase.storage.UploadTask
 
 class ContributeFragment : Fragment(R.layout.fragment_contribute) {
@@ -37,17 +38,56 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     private lateinit var module: EditText
     private lateinit var type: TextView
     private lateinit var comment: EditText
+    private lateinit var youtubeLink: EditText
     private var fileUris: MutableList<Uri> = mutableListOf()
     private var fileNames: MutableList<String> = mutableListOf()
     private lateinit var progressBar: ProgressBar
     private lateinit var contributeButt: AppCompatButton
-    private var uploadTasks: MutableList<UploadTask> = mutableListOf()
     private lateinit var getContent: ActivityResultLauncher<String>
     private lateinit var addFileButt: AppCompatButton
+    private lateinit var viewModel: ContributionViewModel
+    private val pendingActions = mutableListOf<() -> Unit>()
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentContributeBinding.bind(view)
+
+        viewModel = ViewModelProvider(requireActivity())[ContributionViewModel::class.java]
+
+        progressBar = binding.progressBar
+
+        viewModel.progress.observe(viewLifecycleOwner) { progress ->
+            progressBar.progress = progress ?: 0
+        }
+
+        viewModel.progressBarVisibility.observe(viewLifecycleOwner) { visibility ->
+            progressBar.visibility = visibility ?: View.GONE
+        }
+
+        viewModel.contributeButtonVisibility.observe(viewLifecycleOwner) { visibility ->
+            contributeButt.visibility = visibility ?: View.VISIBLE
+        }
+
+        viewModel.addFileButtonText.observe(viewLifecycleOwner) { text ->
+            addFileButt.text = text ?: getString(R.string.ajouter_un_fichier)
+        }
+
+        viewModel.facultyText.observe(viewLifecycleOwner) { facultyText ->
+            faculty.text = facultyText ?: "faculty"
+        }
+
+        viewModel.typeText.observe(viewLifecycleOwner) { typeText ->
+            type.text = typeText ?: "type"
+        }
+
+        viewModel.enableAddFileButton.observe(viewLifecycleOwner) { isEnable ->
+            addFileButt.isEnabled = isEnable
+        }
+
+        viewModel.youtubeLinkEditTextVisibility.observe(viewLifecycleOwner) { visibility ->
+            youtubeLink.visibility = visibility ?: View.GONE
+        }
 
         addFileButt = binding.buttAddFile
         getContent = registerForActivityResult(ActivityResultContracts.GetMultipleContents()) { uris: List<Uri> ->
@@ -56,35 +96,35 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                     fileUris.add(uri)
                     fileNames.add(getFileNameFromUri(requireContext(), uri))
                 }
-                addFileButt.text = getString(R.string.changer_le_fichier)
+                viewModel.setAddFileButtonText(getString(R.string.changer_le_fichier))
             }
         }
 
         Log.e("FileUri", fileUris.toString())
-        progressBar = binding.progressBar
         fullName = binding.fullName
         email = binding.email
         faculty = binding.faculty
         module = binding.module
         type = binding.type
+        youtubeLink = binding.youtubeLink
         comment = binding.comment
 
 
         contributeButt = binding.buttContribute
         contributeButt.setOnClickListener {
-            if(!isEditTextEmpty(fullName) &&
-                isValidEmail(email) &&
-                !isTextViewEmpty(faculty) &&
-                !isEditTextEmpty(module) &&
-                !isTextViewEmpty(type)
+            if((isEditTextEmpty(fullName) ||
+                !isValidEmail(email) ||
+                isTextViewEmpty(faculty) ||
+                isEditTextEmpty(module) ||
+                isTextViewEmpty(type))
                 ) {
-
-                if (fileUris.isNotEmpty()) {
-                    handleSelectedFile(fileUris)
-                } else {
-                    Toast.makeText(requireContext(), "Veuillez sélectionner un fichier.", Toast.LENGTH_SHORT).show()
-                }
+                return@setOnClickListener
             }
+            if (youtubeLink.visibility == View.VISIBLE && !isEditTextEmpty(youtubeLink)) {
+                    return@setOnClickListener
+            }
+
+            handleSelectedFile(fileUris)
         }
 
         addFileButt.setOnClickListener {
@@ -93,15 +133,44 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
 
         val facultyList = resources.getStringArray(R.array.faculties)
         faculty.setOnClickListener {
-            singleChoiceDialog(requireContext(), facultyList, "Faculté", faculty)
+            singleChoiceDialog(requireContext(), facultyList, "Faculté", faculty) {
+                viewModel.setFacultyText(faculty.text.toString())
+            }
         }
 
 
         val typeList = resources.getStringArray(R.array.type)
         type.setOnClickListener {
-            multiChoiceDialog(requireContext(), typeList, "Type", type)
+            multiChoiceDialog(requireContext(), typeList, "Type", type) { selectedOptionsContainYoutubeLink, youtubeLinkIsTheOnlySelectedOption ->
+
+                if (youtubeLinkIsTheOnlySelectedOption) {
+                    addFileButt.setOnClickListener {
+                        Toast.makeText(requireContext(), "Vous ne pouvez pas sélectionner que le lien YouTube", Toast.LENGTH_LONG).show()
+                    }
+                } else {
+                    addFileButt.setOnClickListener(null)
+                    addFileButt.setOnClickListener {
+                        openFilePicker()
+                    }
+                }
+
+                if(selectedOptionsContainYoutubeLink) {
+                    viewModel.setYoutubeLinkEditTextVisibility(View.VISIBLE)
+                } else {
+                    viewModel.setYoutubeLinkEditTextVisibility(View.GONE)
+                }
+                viewModel.setTypeText(type.text.toString())
+            }
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Execute all pending actions
+        pendingActions.forEach { it.invoke() }
+        pendingActions.clear() // Clear the queue once actions are executed
     }
 
     override fun onDestroyView() {
@@ -109,30 +178,39 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         _binding = null
     }
 
-
     private fun openFilePicker() {
+        fileUris = mutableListOf()
+        fileNames = mutableListOf()
         getContent.launch("*/*")
     }
 
     private fun handleSelectedFile(uris: List<Uri>) {
 
-        try {
-            val fileSize = getFileSize(uris)
+        if(type.text.toString() == getString(R.string.lien_youtube)) {
+            val contributionId = System.currentTimeMillis().toString()
+            saveFileContributionToDatabase(contributionId, youtubeLink = youtubeLink.text.toString())
+        } else {
+            if (fileUris.isNotEmpty()) {
+                try {
+                    val fileSize = getFileSize(uris)
 
-            val maxFileSize = 200 * 1024 * 1024
+                    val maxFileSize = 200 * 1024 * 1024
 
-            if (fileSize > maxFileSize) {
-                Toast.makeText(requireContext(), "Les fichiers sont trop volumineux (plus de 200 Mo)", Toast.LENGTH_LONG).show()
-                return
+                    if (fileSize > maxFileSize) {
+                        Toast.makeText(requireContext(), "Les fichiers sont trop volumineux (plus de 200 Mo)", Toast.LENGTH_LONG).show()
+                        return
+                    }
+
+                    uploadFiles()
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(requireContext(), "Échec de l'ouverture du fichier", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(requireContext(), "Veuillez sélectionner un fichier.", Toast.LENGTH_SHORT).show()
             }
-
-            uploadFiles()
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(requireContext(), "Échec de l'ouverture du fichier", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun getFileSize(uris: List<Uri>): Long {
@@ -154,8 +232,9 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
     }
 
     private fun uploadFiles() {
-        contributeButt.visibility = View.GONE
-        progressBar.visibility = View.VISIBLE
+        viewModel.setContributeButtonVisibility(View.GONE)
+        viewModel.enableAddFileButton(false)
+        viewModel.setProgressBarVisibility(View.VISIBLE)
         progressBar.max = fileUris.size * 100
 
         var totalBytesTransferred: Long = 0
@@ -191,74 +270,96 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
                 .addOnSuccessListener {
                     fileReference.downloadUrl.addOnSuccessListener { downloadUri ->
                         downloadUris.add(downloadUri.toString())
-                        if (downloadUris.size == fileUris.size) { // Check if all files are uploaded
-                            handleAllUploadsSuccess(contributionId, downloadUris, totalBytes)
+                        if (downloadUris.size == fileUris.size) {
+                            saveFileContributionToDatabase(contributionId, downloadUris, totalBytes,
+                                youtubeLink.text.toString().ifEmpty { null })
                         }
                     }
                 }
                 .addOnFailureListener { exception ->
-                    if (exception !is StorageException || exception.message != "User cancelled the upload") {
+
+                    runWhenFragmentIsAttached {
                         Toast.makeText(requireContext(), "Upload failed: ${exception.message}", Toast.LENGTH_SHORT).show()
                     }
-                    contributeButt.visibility = View.VISIBLE
-                    progressBar.visibility = View.GONE
-                    progressBar.progress = 0
-                    addFileButt.text = getString(R.string.ajouter_un_fichier)
+
+                    viewModel.setContributeButtonVisibility(View.VISIBLE)
+                    viewModel.enableAddFileButton(true)
+                    viewModel.setProgressBarVisibility(View.GONE)
+                    viewModel.setProgress(0)
+                    viewModel.setAddFileButtonText(getString(R.string.ajouter_un_fichier))
                 }
         }
     }
 
-    private fun handleAllUploadsSuccess(contributionId: String, downloadUris: List<String>, fileSizeInBytes: Long) {
-        val contribution = Contribution(fullName.text.toString(),
+    private fun updateProgressBar(totalBytesTransferred: Long, totalBytes: Long) {
+        val progress = (100.0 * totalBytesTransferred / totalBytes).toInt()
+        viewModel.setProgress(progress)
+    }
+
+    private fun saveFileContributionToDatabase(contributionId: String, downloadUris: List<String>? = null, fileSizeInBytes: Long? = null, youtubeLink: String? = null) {
+
+        val contribution = Contribution(contributionId,
+            fullName.text.toString(),
             email.text.toString(),
             faculty.text.toString(),
             module.text.toString(),
             type.text.toString(),
-            comment.text.toString(),
+            comment.text.toString().ifEmpty { null },
             downloadUris,
-            fileNames,
-            contributionId,
-            fileSizeInBytes
+            if (downloadUris == null) null else fileNames,
+            fileSizeInBytes,
+            youtubeLink
         )
-        saveFileContributionToDatabase(contribution)
-        progressBar.visibility = View.GONE
-        contributeButt.visibility = View.VISIBLE
-        progressBar.progress = 0
-        addFileButt.text = getString(R.string.ajouter_un_fichier)
-    }
 
-    private fun updateProgressBar(totalBytesTransferred: Long, totalBytes: Long) {
-        val progress = (100.0 * totalBytesTransferred / totalBytes).toInt()
-        progressBar.progress = progress
-    }
-
-    private fun saveFileContributionToDatabase(contribution: Contribution) {
         contributionsRef.child(contribution.contributionId).setValue(contribution).addOnCompleteListener { task ->
+
+
             if (task.isSuccessful) {
-                Utils.alertDialog(requireContext(), "Merci pour votre contribution", "Vous recevrez un email lorsque votre contribution sera confirmée.",
-                    "Ok", null, {
-                        reset()
-                    }, null)
+                runWhenFragmentIsAttached {
+                    Utils.alertDialog(requireContext(), "Merci pour votre contribution", "Vous recevrez un email lorsque votre contribution sera confirmée.",
+                        "Ok", null, {
+                            reset()
+                        }, null)
+                }
+                Log.e("ContributeFragment", "saving contribution to database")
             } else {
                 Log.e("ContributeFragment", "Error saving contribution to database: ${task.exception}")
-                Toast.makeText(requireContext(), "Error saving contribution to database", Toast.LENGTH_SHORT).show()
+                runWhenFragmentIsAttached {
+                    Toast.makeText(requireContext(), "Error saving contribution to database", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun reset() {
         faculty.hint = "Faculty"
-        faculty.text = ""
-        module.hint = "Module"
-        module.text.clear()
-        type.hint = "Type"
-        type.text = ""
-        comment.hint = "Comment"
-        comment.text.clear()
-        fileUris = mutableListOf()
-        addFileButt.text = getString(R.string.ajouter_un_fichier)
-        progressBar.visibility = View.GONE
-        progressBar.progress = 0
-        contributeButt.visibility = View.VISIBLE
+                faculty.text = ""
+                module.hint = "Module"
+                module.text.clear()
+                type.hint = "Type"
+                type.text = ""
+        youtubeLink.hint = "Lien Youtube"
+        youtubeLink.text.clear()
+                comment.hint = "Comment"
+                comment.text.clear()
+                fileUris = mutableListOf()
+                fileNames = mutableListOf()
+                viewModel.setAddFileButtonText(getString(R.string.ajouter_un_fichier))
+                viewModel.setProgressBarVisibility(View.GONE)
+                viewModel.setProgress(0)
+                viewModel.setContributeButtonVisibility(View.VISIBLE)
+        viewModel.enableAddFileButton(true)
+    }
+
+    private fun runWhenFragmentIsAttached(action: () -> Unit) {
+        if (isAdded && isResumed) {
+            // Fragment is attached and resumed, execute the action immediately
+            action()
+        } else {
+            // Fragment is not attached, add to the queue for later
+            pendingActions.add(action)
+        }
     }
 }
+

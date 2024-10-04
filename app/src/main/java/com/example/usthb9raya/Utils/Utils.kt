@@ -6,13 +6,10 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.provider.OpenableColumns
-import android.text.TextUtils.replace
 import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.startActivity
-import androidx.fragment.app.Fragment
 
 object Utils {
     fun openDriveLink(context: Context, url: String?) {
@@ -109,7 +106,7 @@ object Utils {
         return fileName ?: "Unknown File"
     }
 
-    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+    fun multiChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: (selectedOptionsContainYoutubeLink: Boolean, youtubeLinkIsTheOnlySelectedOption: Boolean) -> Unit) {
 
         val selectedItems = BooleanArray(options.size)
 
@@ -124,8 +121,8 @@ object Utils {
             val selectedOptions = options.filterIndexed { index, _ -> selectedItems[index] }.joinToString(", ")
 
             textView.text = selectedOptions
-
             dialog.dismiss()
+            action.invoke(selectedOptions.contains("Lien Youtube"), selectedOptions == "Lien Youtube")
         }
 
         builder.setNegativeButton("Cancel") { dialog, _ ->
@@ -135,7 +132,7 @@ object Utils {
         builder.show()
     }
 
-    fun singleChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView) {
+    fun singleChoiceDialog(context: Context, options: Array<String>, title: String, textView: TextView, action: () -> Unit) {
 
         val builder = AlertDialog.Builder(context)
         builder.setTitle(title)
@@ -143,6 +140,7 @@ object Utils {
         builder.setSingleChoiceItems(options, -1) { dialogInterface, which ->
             textView.setText(options[which])
             dialogInterface.dismiss()
+            action.invoke()
         }
 
         builder.show()

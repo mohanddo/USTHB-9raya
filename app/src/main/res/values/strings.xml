@@ -20,6 +20,9 @@
     <string name="propos_de_usthb_9raya">À Propos de USTHB 9raya</string>
     <string name="ajouter_un_fichier">Ajouter Des Fichier</string>
     <string name="changer_le_fichier">Changer Les Fichier</string>
+    <string name="youtube_links">Liens YouTube</string>
+    <string name="youtube_link">Entrez le lien vidéo/playlist</string>
+    <string name="lien_youtube">Lien Youtube</string>
 
     <string-array name="faculties">
         <item value="Faculté D'informatique">Informatique </item>
@@ -39,6 +42,6 @@
         <item value="others">Autres</item>
         <item value="Courses">Cours</item>
         <item value="exams">Examens</item>
-        <item value="youtube">Youtube lien</item>
+        <item value="youtube">Lien Youtube</item>
     </string-array>
 </resources>
