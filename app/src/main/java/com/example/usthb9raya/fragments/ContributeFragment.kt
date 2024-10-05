@@ -73,6 +73,10 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
             addFileButt.text = text ?: getString(R.string.ajouter_un_fichier)
         }
 
+        viewModel.addFileButtonVisibility.observe(viewLifecycleOwner) { visibility ->
+            addFileButt.visibility = visibility ?: View.VISIBLE
+        }
+
         viewModel.facultyText.observe(viewLifecycleOwner) { facultyText ->
             faculty.text = facultyText ?: "faculty"
         }
@@ -112,15 +116,17 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
 
         contributeButt = binding.buttContribute
         contributeButt.setOnClickListener {
+
             if((isEditTextEmpty(fullName) ||
                 !isValidEmail(email) ||
                 isTextViewEmpty(faculty) ||
                 isEditTextEmpty(module) ||
                 isTextViewEmpty(type))
                 ) {
+
                 return@setOnClickListener
             }
-            if (youtubeLink.visibility == View.VISIBLE && !isEditTextEmpty(youtubeLink)) {
+            if (youtubeLink.visibility == View.VISIBLE && isEditTextEmpty(youtubeLink)) {
                     return@setOnClickListener
             }
 
@@ -142,16 +148,10 @@ class ContributeFragment : Fragment(R.layout.fragment_contribute) {
         val typeList = resources.getStringArray(R.array.type)
         type.setOnClickListener {
             multiChoiceDialog(requireContext(), typeList, "Type", type) { selectedOptionsContainYoutubeLink, youtubeLinkIsTheOnlySelectedOption ->
-
-                if (youtubeLinkIsTheOnlySelectedOption) {
-                    addFileButt.setOnClickListener {
-                        Toast.makeText(requireContext(), "Vous ne pouvez pas sélectionner que le lien YouTube", Toast.LENGTH_LONG).show()
-                    }
+                if(youtubeLinkIsTheOnlySelectedOption) {
+                    viewModel.setAddFileButtonVisibility(View.GONE)
                 } else {
-                    addFileButt.setOnClickListener(null)
-                    addFileButt.setOnClickListener {
-                        openFilePicker()
-                    }
+                    viewModel.setAddFileButtonVisibility(View.VISIBLE)
                 }
 
                 if(selectedOptionsContainYoutubeLink) {

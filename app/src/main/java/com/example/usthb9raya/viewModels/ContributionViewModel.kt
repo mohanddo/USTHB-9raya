@@ -10,6 +10,7 @@ class ContributionViewModel: ViewModel() {
     var typeText = MutableLiveData<String>()
     var contributeButtonVisibility = MutableLiveData<Int>()
     var addFileButtonText = MutableLiveData<String>()
+    var addFileButtonVisibility = MutableLiveData<Int>()
     var enableAddFileButton = MutableLiveData<Boolean>()
     var youtubeLinkEditTextVisibility = MutableLiveData<Int>()
 
@@ -43,5 +44,9 @@ class ContributionViewModel: ViewModel() {
 
     fun setYoutubeLinkEditTextVisibility(visibility: Int) {
         youtubeLinkEditTextVisibility.value = visibility
+    }
+
+    fun setAddFileButtonVisibility(visibility: Int) {
+        addFileButtonVisibility.value = visibility
     }
 }

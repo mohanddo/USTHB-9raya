@@ -46,6 +46,18 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="16dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:text="Si vous disposez d'une ressource que vous souhaitez partager avec d'autres étudiants, vous pouvez la soumettre ici">
+            </TextView>
+
             <EditText
                 android:id="@+id/fullName"
                 android:layout_width="match_parent"
@@ -106,17 +118,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
-                android:gravity="center_vertical"
-                android:ems="10"
-                android:textSize="18sp"
-                android:hint="@string/type"
                 android:layout_marginBottom="16dp"
-                android:drawablePadding="8dp"
-                android:minHeight="48dp"
                 android:background="@drawable/bck_user_input"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/type"
+                android:minHeight="48dp"
                 android:padding="8dp"
-                android:textColor="@color/black"/>
-
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/youtube_Link"
@@ -193,19 +204,6 @@
                     android:layout_marginEnd="40dp"
                     android:layout_marginBottom="8dp"
                     android:visibility="gone"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="16dp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textStyle="normal"
-                android:textSize="12sp"
-                android:text="Merci d’aider les autres en fournissant cette ressource d’étude!">
-            </TextView>
-
 
 
         </LinearLayout>
