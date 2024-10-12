@@ -6,19 +6,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".ContributeRank">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:elevation="16dp"
+        android:background="@drawable/bck_top_classement">
+        <ImageView
+            android:id="@+id/back_rank"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_weight="0.9"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/youtube_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="0.1"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:text="Classement" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:textColor="#5D5959"
         android:textSize="22sp"
         android:layout_marginHorizontal="16dp"
         android:text="Nous sommes ravis de vous annoncer que la fonctionnalité de classement sera bientôt disponible dans la prochaine mise à jour de notre application"
         android:layout_gravity="center"
+        android:gravity="center"
         android:textAlignment="center"
         android:textStyle="normal"
         android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="50dp"
         android:lineSpacingMultiplier="1.2">
     </TextView>
 
