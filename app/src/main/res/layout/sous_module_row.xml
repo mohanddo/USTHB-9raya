@@ -32,7 +32,14 @@
             android:paddingStart="8dp"
             android:gravity="center_vertical"
             android:text="module name"
-            android:textStyle="normal" />
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_gravity="center_vertical"
+            android:freezesText="true"/>
 
         <ImageView
             android:id="@+id/ic_favorite_sous_module"

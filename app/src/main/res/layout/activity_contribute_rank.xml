@@ -15,16 +15,7 @@
         android:orientation="horizontal"
         android:elevation="16dp"
         android:background="@drawable/bck_top_classement">
-        <ImageView
-            android:id="@+id/back_rank"
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_back"
-            android:layout_weight="0.9"
-            android:layout_marginStart="8dp"
-            android:layout_gravity="center">
 
-        </ImageView>
 
         <TextView
             android:id="@+id/youtube_title"
@@ -33,6 +24,7 @@
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:layout_marginStart="8dp"
             android:layout_weight="0.1"
             android:padding="8dp"
             android:maxLines="1"
