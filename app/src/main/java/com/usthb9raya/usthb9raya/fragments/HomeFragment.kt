@@ -70,8 +70,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             val localJsonArray = readJsonFromFile(localFile!!)
             binding.recyclerView.adapter = UnifiedAdapter(parseJson(localJsonArray), requireContext())
             binding.recyclerView.visibility = View.VISIBLE
-        } else {
-            Toast.makeText(requireContext(), "No local data found", Toast.LENGTH_SHORT).show()
         }
     }
 
