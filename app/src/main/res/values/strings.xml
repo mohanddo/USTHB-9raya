@@ -31,9 +31,9 @@
         <item value="Faculté De Chimie">Mathématiques</item>"
         <item value="Faculté De Chimie">Génie Mécanique Et Génie Des Procédés</item>"
         <item value="Faculté De Chimie">Génie Électrique</item>"
-        <item value="Faculté De Chimie">Sciences Biologiques</item>"
         <item value="Faculté De Chimie">Génie Civil</item>"
-        <item value="Faculté De Chimie">Science De La Terre</item>"
+        <item value="Faculté De Chimie">Science De La Terre</item>
+        <item value="Activity Extrascolaires">Activity Extrascolaires</item>
     </string-array>
 
     <string-array name="type">
