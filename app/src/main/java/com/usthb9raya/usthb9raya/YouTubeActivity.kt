@@ -38,6 +38,7 @@ class YouTubeActivity : AppCompatActivity() {
 
         binding.back.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
         // Get the module name from the intent
