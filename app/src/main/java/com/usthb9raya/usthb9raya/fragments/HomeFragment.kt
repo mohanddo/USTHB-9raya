@@ -8,8 +8,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.storage.FileDownloadTask
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageMetadata
+import com.google.firebase.storage.StorageTask
 import com.usthb9raya.usthb9raya.R
 import com.usthb9raya.usthb9raya.adapters.UnifiedAdapter
 import com.usthb9raya.usthb9raya.dataClass.Faculty
@@ -26,6 +28,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val storage = FirebaseStorage.getInstance()
     private val storageRef = storage.reference.child("faculties.json")
     private var localFile: File? = null
+
+    private var downloadTask: StorageTask<FileDownloadTask.TaskSnapshot>? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -56,6 +61,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        downloadTask?.cancel()
         _binding = null
     }
 
@@ -98,17 +104,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun fetchJsonFromFirebaseStorage(onDataFetched: (JSONArray) -> Unit) {
-        // Download the file from Firebase
         val tempFile = File.createTempFile("faculties_modules", "json")
-        storageRef.getFile(tempFile).addOnSuccessListener {
-            val jsonString = tempFile.readText()
-            saveJsonToFile(JSONArray(jsonString))
-            onDataFetched(JSONArray(jsonString))
+        downloadTask = storageRef.getFile(tempFile)
+        downloadTask?.addOnSuccessListener {
+            if (isAdded && view != null) {
+                val jsonString = tempFile.readText()
+                saveJsonToFile(JSONArray(jsonString))
+                onDataFetched(JSONArray(jsonString))
+            }
             tempFile.delete()
-        }.addOnFailureListener {
-            Toast.makeText(requireContext(), "Failed to fetch data from Firebase Storage", Toast.LENGTH_SHORT).show()
+        }?.addOnFailureListener {
+            if (isAdded && view != null) {
+                Toast.makeText(requireContext(), "Failed to fetch data from Firebase Storage", Toast.LENGTH_SHORT).show()
+            }
         }
     }
+
 
     private fun syncLocalWithFirebase(localJson: JSONArray, firebaseJson: JSONArray) {
         val (facultiesToAdd, facultiesToRemove) = compareJson(localJson, firebaseJson)
