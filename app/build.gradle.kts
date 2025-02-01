@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.usthb9raya.usthb9raya"
+    namespace = "com.mohand.usthb9raya"
     compileSdk = 34
 
     buildFeatures {
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.usthb9raya.usthb9raya"
+        applicationId = "com.mohand.usthb9raya"
         minSdk = 24
         targetSdk = 34
         versionCode = 5

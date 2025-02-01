@@ -8,9 +8,28 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:131135369387:android:1c7934405b53f75a9247ee",
+        "mobilesdk_app_id": "1:131135369387:android:e5788da14920e5999247ee",
         "android_client_info": {
-          "package_name": "com.usthb9raya.usthb9raya"
+          "package_name": "com.example.usthb9rayaadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBTVIftcTD0NeakdlyA-qAZ-hQ1StskeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131135369387:android:7a79deac0bb623229247ee",
+        "android_client_info": {
+          "package_name": "com.mohand.usthb9raya"
         }
       },
       "oauth_client": [],
